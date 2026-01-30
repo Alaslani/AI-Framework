@@ -15,6 +15,21 @@ Break complex work into manageable phases.
 
 **Key Insight:** Invest time at the top of the pyramid. Fixing research is cheap. Fixing code is expensive.
 
+## Plans as Alignment Tools
+
+Plans aren't just for the AI — they're for **team alignment**.
+
+Why plans > code for communication:
+- Plans are shorter than implementations
+- Plans use natural language, not syntax
+- Plans surface disagreements early
+- Plans can be reviewed in minutes, not hours
+
+> "I can't read 2,000 lines of code every day. But I can sure as heck read 200 lines of an implementation plan."
+> — Dexter Horthy
+
+When you approve a plan, you and the AI are on the same page. Disagreements surface before implementation, not after.
+
 ## Task Size Classification
 
 | Type | Scope | Approach |

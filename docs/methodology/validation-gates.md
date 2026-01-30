@@ -13,6 +13,35 @@ Never proceed to the next phase without validating the current one.
          "Correct?"    "Sound?"         "Working?"
 ```
 
+## Human Review is the Point
+
+Gates aren't just AI self-checks — they're **human review points**.
+
+| Review Stage | Cost to Review | Cost of Errors |
+|--------------|----------------|----------------|
+| Research | Low (reading) | 1000s bad lines prevented |
+| Plan | Medium (logic) | 100s bad lines prevented |
+| Code | High (understand + test) | 1 bad line caught |
+
+**The earlier you catch problems, the less wrong code gets written.**
+
+### Review Checklist
+
+Before approving research:
+- [ ] Does it answer the original question?
+- [ ] Are file paths specific with line numbers?
+- [ ] Is the data flow clear?
+
+Before approving plan:
+- [ ] Does each phase have clear success criteria?
+- [ ] Are the phases correctly ordered?
+- [ ] Are edge cases addressed?
+
+Before approving code:
+- [ ] Does it match the plan?
+- [ ] Do tests pass?
+- [ ] Is it the minimal change needed?
+
 ## Gate Types
 
 ### Understanding Gate (After Research)

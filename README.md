@@ -32,6 +32,8 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
   - [Session Handoff](docs/patterns/session-handoff.md)
   - [Project Knowledge](docs/patterns/project-knowledge.md)
   - [Decision Logging](docs/patterns/decision-logging.md)
+  - [Subagent Usage](docs/patterns/subagent-usage.md)
+  - [Context Warning Signs](docs/patterns/context-warning-signs.md)
 - **Memory**
   - [AI Memory System](docs/memory/ai-memory-system.md)
   - [Cross-Project Learning](docs/memory/cross-project-learning.md)

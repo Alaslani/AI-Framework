@@ -43,6 +43,34 @@ Understand the problem space before writing code.
 - Data flow diagram
 - Open questions
 
+### Research Output Format
+
+Good research enables implementation without re-searching. Always include:
+
+| Required | Example |
+|----------|---------|
+| File path | `src/lib/auth.ts` |
+| Line numbers | `:45-67` |
+| Purpose | "Token validation" |
+
+**Template:**
+```markdown
+## File Map
+| File | Lines | Purpose |
+|------|-------|---------|
+| `src/lib/auth.ts` | 45-67 | Token validation |
+| `src/app/api/login/route.ts` | 12-34 | Login endpoint |
+
+## Data Flow
+User → LoginForm → /api/login → auth.ts:validateToken() → DB
+
+## Key Functions
+- `validateToken()` at auth.ts:45 — validates JWT
+- `createSession()` at auth.ts:89 — creates user session
+```
+
+**Why line numbers matter:** The implementing agent can jump directly to the right location instead of searching again, keeping context clean.
+
 ### Checkpoint
 Ask: "Is my understanding correct?" before proceeding.
 
@@ -58,7 +86,25 @@ Before coding:
 - One phase at a time
 - Keep context under 40%
 - Verify after each phase
-- Compact if context grows
+- Write progress manually (see below)
+
+### Intentional Compaction
+
+❌ **Don't use `/compact`** — It's automatic and loses important context.
+
+✅ **Do write explicit progress files:**
+
+| File | When | Purpose |
+|------|------|---------|
+| PROGRESS.md | During work | Checkpoint within a feature |
+| Transfer Pack | End of session | Handoff to next session |
+| Plan updates | After each phase | Mark "✅ Done" on completed items |
+
+**Why manual > automatic:**
+1. Forces you to synthesize what matters
+2. Creates reusable artifacts
+3. Gives you control over what's preserved
+4. Results in better onboarding for fresh contexts
 
 ### Verification Protocol
 After each phase:

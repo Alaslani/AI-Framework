@@ -9,16 +9,29 @@ AI-Framework is a methodology for AI-assisted software development. It provides 
 ### 1. Clarity Over Speed
 AI makes implementation fast. The bottleneck is now knowing what to build. Invest time in research and planning—it pays dividends.
 
-### 2. Signal Over Ceremony
+### 2. Spec-First Development
+
+**Specs are the product. Code is the byproduct.**
+
+```
+Prompts + Specs = Source code
+Generated code  = Compiled artifact
+```
+
+The description of what to build matters more than the code itself. Code can be regenerated, but clear specs ensure it's regenerated correctly.
+
+As AI writes more code, **the specs become what you maintain**, not the implementation.
+
+### 3. Signal Over Ceremony
 Don't just track status. Capture the **signal**—what you learned, why decisions were made, what didn't work.
 
-### 3. Context Under Control
+### 4. Context Under Control
 AI assistants have context limits. Keep context under 40% for better reasoning. Compact when needed, start fresh between unrelated tasks.
 
-### 4. Knowledge Compounds
+### 5. Knowledge Compounds
 Every session should make the next one better. Capture learnings, update your knowledge base, build institutional memory.
 
-### 5. Verification at Every Gate
+### 6. Verification at Every Gate
 Trust but verify. Type check, lint, build, and test after every implementation phase.
 
 ## Who This Is For
