@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.3.2] - 2026-01-30
+
+### Added
+- `docs/anti-patterns.md` — 8 common framework misuses to avoid
+- `docs/compound-checklist.md` — End-of-session questions
+- `docs/exit-test.md` — When NOT to use the framework
+- `docs/fic-loop.md` — ASCII workflow diagram
+- `assets/fic-diagram.svg` — Clean SVG workflow diagram
+- FIC diagram added to README header
+- "Guides" section in README table of contents
+- "Why AI Development Breaks" section in overview.md
+- "Severity Levels" table in fic-workflow.md
+
+---
+
 ## [1.3.1] - 2026-01-30
 
 ### Added
