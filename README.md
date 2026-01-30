@@ -1,154 +1,57 @@
-# AI-Framework
+# AI-Framework 🛡️ 🤖
 
-A lightweight, language-agnostic methodology for AI-assisted software development.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Quick Start](#quick-start)
-- [The FIC Workflow](#the-fic-workflow)
-- [Documentation](#documentation)
-- [Templates](#templates)
-- [Adoption Path](#adoption-path)
-- [Contributing](#contributing)
-- [License](#license)
+A simple, scalable methodology for AI-assisted development.
 
 ## Introduction
 
-AI-Framework provides a structured approach to working with AI coding assistants. It's built on one core insight:
+AI has transformed software development. What once took weeks now takes hours. But this speed creates new challenges: unclear requirements become expensive mistakes faster, context gets lost between sessions, and hard-won learnings disappear when conversations end.
 
-> **AI collapsed the cost of implementation. Clarity is now the bottleneck.**
+AI-Framework solves these problems with a structured methodology that works for any project, any language, any team size. It focuses on the highest-leverage activities—research and planning—while providing patterns for context management, session continuity, and knowledge preservation.
 
-This framework helps you spend time on the right problems—understanding and planning—while letting AI handle execution.
+This is not a boilerplate or template. It's an opinionated guide based on patterns proven across 50+ development sessions. Use what works for you, adapt what doesn't, and stay consistent.
 
-### Key Principles
+## What makes a project "bulletproof"?
 
-- **Research before acting** — Understand code before changing it
-- **Plan at the right level** — Spec → Tech → Steps
-- **Validate continuously** — Check after each phase
-- **Capture learnings** — Build knowledge that compounds
+- **Clarity over speed** — Know what to build before building it
+- **Signal over ceremony** — Capture learnings, not just status
+- **Context under control** — Keep AI context under 40% for better reasoning
+- **Knowledge compounds** — Every session makes the next one better
+- **Verification at every gate** — Type check, lint, build, test
 
-### What This Is NOT
+## Table of Contents
 
-- ❌ A tool or CLI (zero dependencies)
-- ❌ Language-specific (works with any stack)
-- ❌ All-or-nothing (use what you need)
-- ❌ AI-tool-specific (works with any assistant)
+- [Overview](docs/overview.md)
+- [Getting Started](docs/getting-started.md)
+- **Methodology**
+  - [FIC Workflow](docs/methodology/fic-workflow.md)
+  - [Phased Development](docs/methodology/phased-development.md)
+  - [Validation Gates](docs/methodology/validation-gates.md)
+- **Patterns**
+  - [Session Handoff](docs/patterns/session-handoff.md)
+  - [Project Knowledge](docs/patterns/project-knowledge.md)
+  - [Decision Logging](docs/patterns/decision-logging.md)
+- **Memory**
+  - [AI Memory System](docs/memory/ai-memory-system.md)
+  - [Cross-Project Learning](docs/memory/cross-project-learning.md)
+- **Integrations**
+  - [Notion](docs/integrations/notion.md)
+  - [Prompt Templates](docs/integrations/prompt-templates.md)
+- [Templates](templates/)
 
 ## Quick Start
 
-**Option 1: Minimal (2 minutes)**
-
-```bash
-# Copy the project context template
-curl -o CLAUDE.md https://raw.githubusercontent.com/Alaslani/AI-Framework/main/templates/CLAUDE.md.template
-
-# Edit for your project
-```
-
-**Option 2: Full Workflow (5 minutes)**
-
-```bash
-# Clone the repo
-git clone https://github.com/Alaslani/AI-Framework.git
-
-# Copy templates to your project
-cp AI-Framework/templates/* your-project/docs/
-```
-
-## The FIC Workflow
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│   FIND              IMPLEMENT           COMPOUND        │
-│   ────              ─────────           ────────        │
-│   Research          Execute phases      Capture         │
-│   Plan approach     Validate each       learnings       │
-│   Define success    Keep context lean   Update docs     │
-│                                                         │
-│   [~20% time]       [~70% time]         [~10% time]     │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-```
-
-### Phase Overview
-
-| Phase | Input | Output | Key Question |
-|-------|-------|--------|--------------|
-| **Research** | Task/bug | Understanding | "What exists?" |
-| **Planning** | Research | Approach | "How to build it?" |
-| **Implementation** | Plan | Working code | "Does it work?" |
-| **Review** | Code | Validated code | "Is it correct?" |
-| **Retrospective** | Experience | Learnings | "What did we learn?" |
-
-## Documentation
-
-| Document | Purpose |
-|----------|---------|
-| [Philosophy](docs/00-philosophy.md) | Core principles and mental models |
-| [When to Use AI](docs/01-when-to-use-ai.md) | Decision framework |
-| [Research Phase](docs/02-research-phase.md) | Understanding before acting |
-| [Planning Phase](docs/03-planning-phase.md) | Designing the approach |
-| [Implementation](docs/04-implementation-phase.md) | Executing with validation |
-| [Review Phase](docs/05-review-phase.md) | Quality gates |
-| [Retrospective](docs/06-retrospective-phase.md) | Learning capture |
-| [Context Management](docs/07-context-management.md) | Keeping AI productive |
-| [Skills](docs/08-skills.md) | Composable capabilities |
-| [Scaling](docs/09-scaling.md) | Solo → Team → Enterprise |
-| [Quick Reference](docs/10-quick-reference.md) | Cheat sheet |
-
-## Templates
-
-Ready-to-use templates for common workflows:
-
-| Template | Purpose | When to Use |
-|----------|---------|-------------|
-| [CLAUDE.md](templates/CLAUDE.md.template) | Project context | Every project |
-| [Feature Plan](templates/feature-plan.md) | Spec + Tech + Steps | New features |
-| [Session Handoff](templates/session-handoff.md) | Context transfer | Between sessions |
-| [Retrospective](templates/retrospective.md) | Learning capture | After completing work |
-
-## Adoption Path
-
-### Week 1: Foundation
-- [ ] Add `CLAUDE.md` to your project
-- [ ] Practice "understand before changing"
-- [ ] Verify every AI-generated change
-
-### Week 2: Structure
-- [ ] Use Research → Plan → Implement flow
-- [ ] Keep context under 40%
-- [ ] Clear context between tasks
-
-### Week 3: Capture
-- [ ] Document learnings after tasks
-- [ ] Start pattern collection
-- [ ] Log significant decisions
-
-### Week 4+: Optimize
-- [ ] Review and refine workflow
-- [ ] Share patterns with team
-- [ ] Customize templates
+1. Copy `templates/MASTER_REFERENCE.md` to your project
+2. Fill in project-specific sections
+3. Start every AI session by pointing to your MASTER_REFERENCE
+4. Use `templates/TRANSFER_PACK.md` to hand off between sessions
+5. Capture learnings in your MASTER_REFERENCE after each session
 
 ## Contributing
 
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
-
-We welcome:
-- Documentation improvements
-- New patterns from real usage
-- Template refinements
-- Translations
+Contributions welcome! See [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## License
 
 [MIT](LICENSE)
-
----
-
-<div align="center">
-
-**[Documentation](docs/)** · **[Templates](templates/)** · **[Contributing](.github/CONTRIBUTING.md)**
-
-</div>
