@@ -39,6 +39,7 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
   - [Notion](docs/integrations/notion.md)
   - [Prompt Templates](docs/integrations/prompt-templates.md)
 - [Templates](templates/)
+- [References](REFERENCES.md) — Methodology sources and credits
 
 ## Quick Start
 
