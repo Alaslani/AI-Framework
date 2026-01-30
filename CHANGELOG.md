@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.2.2] - 2026-01-30
+
+### Added
+- Expanded security guide with 7 additional issues:
+  - Rate limiting
+  - Verbose error messages
+  - CORS misconfiguration
+  - Missing security headers
+  - Dependency vulnerabilities
+  - CSRF protection
+  - Hardcoded admin accounts
+- Extended security checklist with 4 new categories
+
+---
+
 ## [1.2.1] - 2026-01-30
 
 ### Added

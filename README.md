@@ -1,6 +1,6 @@
 # AI-Framework 🛡️ 🤖
 
-[![Version](https://img.shields.io/badge/version-1.2.1-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.2-blue)](CHANGELOG.md)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](.github/CONTRIBUTING.md)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-orange)](#)

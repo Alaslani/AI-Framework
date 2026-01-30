@@ -4,13 +4,20 @@
 
 AI-assisted development moves fast. Security often gets overlooked. This guide covers the most common vulnerabilities in vibe-coded apps and how to fix them.
 
-## The Three Critical Issues
+## The Ten Critical Issues
 
 | Issue | Risk Level | How Common |
 |-------|------------|------------|
 | Exposed API Keys | Critical | Very common |
 | Missing Authorization | Critical | Extremely common |
 | Unvalidated Input | High | Common |
+| No Rate Limiting | High | Very common |
+| Verbose Error Messages | Medium | Common |
+| CORS Misconfiguration | Medium | Common |
+| Missing Security Headers | Medium | Very common |
+| Dependency Vulnerabilities | High | Common |
+| No CSRF Protection | Medium | Common |
+| Hardcoded Admin Accounts | Critical | Occasional |
 
 ---
 
@@ -166,6 +173,265 @@ app.post('/upload', (req, res) => {
 
 ---
 
+## 4. No Rate Limiting
+
+### The Problem
+
+Vibe-coded APIs accept unlimited requests:
+
+```javascript
+// ❌ NO LIMIT - Attackers can hammer this
+app.post('/api/login', (req, res) => {
+  return authenticate(req.body);
+});
+```
+
+This enables:
+- Brute force password attacks
+- API abuse running up your costs
+- Denial of service
+
+### The Fix
+
+```javascript
+// ✅ RATE LIMITED
+import rateLimit from 'express-rate-limit';
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // 100 requests per window
+  message: 'Too many requests, try again later'
+});
+
+app.use('/api/', limiter);
+
+// Stricter for auth endpoints
+const authLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 5, // 5 attempts
+});
+
+app.post('/api/login', authLimiter, (req, res) => {
+  return authenticate(req.body);
+});
+```
+
+---
+
+## 5. Verbose Error Messages
+
+### The Problem
+
+Detailed errors help attackers:
+
+```javascript
+// ❌ LEAKY - Reveals system info
+app.use((err, req, res, next) => {
+  res.status(500).json({
+    error: err.message,
+    stack: err.stack,
+    query: req.query,
+    dbConnection: process.env.DATABASE_URL
+  });
+});
+```
+
+### The Fix
+
+```javascript
+// ✅ SAFE - Generic public errors, detailed logs
+app.use((err, req, res, next) => {
+  // Log full error internally
+  console.error('Internal error:', err);
+
+  // Return generic message to user
+  res.status(500).json({
+    error: 'Something went wrong',
+    requestId: req.id // For support lookup
+  });
+});
+```
+
+**Rules:**
+- Never expose stack traces in production
+- Never reveal database structure
+- Never show internal paths
+- Log details server-side only
+
+---
+
+## 6. CORS Misconfiguration
+
+### The Problem
+
+Wildcard CORS allows any site to call your API:
+
+```javascript
+// ❌ WIDE OPEN - Any website can access
+app.use(cors({ origin: '*' }));
+```
+
+### The Fix
+
+```javascript
+// ✅ RESTRICTED - Only your domains
+app.use(cors({
+  origin: [
+    'https://yourapp.com',
+    'https://www.yourapp.com',
+    process.env.NODE_ENV === 'development' && 'http://localhost:3000'
+  ].filter(Boolean),
+  credentials: true
+}));
+```
+
+---
+
+## 7. Missing Security Headers
+
+### The Problem
+
+Default headers leave browsers vulnerable. Without security headers, your app is susceptible to:
+- Clickjacking (no X-Frame-Options)
+- MIME sniffing attacks (no X-Content-Type-Options)
+- XSS attacks (no X-XSS-Protection)
+
+### The Fix
+
+```javascript
+// ✅ Add security headers
+import helmet from 'helmet';
+
+app.use(helmet());
+
+// Or manually:
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000');
+  next();
+});
+```
+
+---
+
+## 8. Dependency Vulnerabilities
+
+### The Problem
+
+AI often suggests outdated packages with known vulnerabilities:
+
+```json
+// ❌ Old version with CVEs
+"dependencies": {
+  "lodash": "4.17.15"
+}
+```
+
+### How to Check
+
+```bash
+# npm
+npm audit
+
+# yarn
+yarn audit
+
+# pnpm
+pnpm audit
+```
+
+### The Fix
+
+```bash
+# Auto-fix what's possible
+npm audit fix
+
+# Update specific package
+npm update lodash
+
+# Check for major updates
+npx npm-check-updates
+```
+
+**Make this routine:**
+- Run `npm audit` before every deploy
+- Set up GitHub Dependabot
+- Review AI-suggested packages
+
+---
+
+## 9. No CSRF Protection
+
+### The Problem
+
+Without CSRF tokens, attackers can trick users into actions:
+
+```html
+<!-- Malicious site -->
+<form action="https://yourapp.com/api/transfer" method="POST">
+  <input type="hidden" name="to" value="attacker" />
+  <input type="hidden" name="amount" value="1000" />
+</form>
+<script>document.forms[0].submit()</script>
+```
+
+### The Fix
+
+```javascript
+// ✅ Require CSRF token
+import csrf from 'csurf';
+
+app.use(csrf({ cookie: true }));
+
+app.get('/form', (req, res) => {
+  res.render('form', { csrfToken: req.csrfToken() });
+});
+```
+
+```html
+<form action="/transfer" method="POST">
+  <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+  <!-- form fields -->
+</form>
+```
+
+**For SPAs:** Use SameSite cookies + custom headers
+
+---
+
+## 10. Hardcoded Admin Accounts
+
+### The Problem
+
+```javascript
+// ❌ CRITICAL - Obvious backdoor
+if (username === 'admin' && password === 'admin123') {
+  grantAdminAccess();
+}
+
+// ❌ Also bad - in config files
+const ADMIN_PASSWORD = 'supersecret';
+```
+
+### The Fix
+
+- Never hardcode credentials
+- Use proper user management
+- Admin accounts via secure setup process
+- Rotate credentials regularly
+
+```javascript
+// ✅ Proper admin check
+const isAdmin = await db.users.findOne({
+  id: req.session.userId,
+  role: 'admin'
+});
+```
+
+---
+
 ## Security Checklist for Vibe Coders
 
 Before deploying, verify:
@@ -187,6 +453,27 @@ Before deploying, verify:
 - [ ] File uploads restricted by type and size
 - [ ] No raw SQL queries with user input
 - [ ] Error messages don't expose system details
+
+### Rate Limiting & DoS Protection
+- [ ] Auth endpoints rate limited (5-10 attempts/hour)
+- [ ] API endpoints rate limited (100-1000/minute based on use case)
+- [ ] File upload size limits enforced
+
+### Error Handling
+- [ ] No stack traces in production responses
+- [ ] No database/system info in errors
+- [ ] Errors logged server-side with request ID
+
+### Headers & CORS
+- [ ] Security headers set (use helmet or manual)
+- [ ] CORS restricted to your domains only
+- [ ] SameSite cookie attribute set
+
+### Dependencies & Config
+- [ ] `npm audit` shows 0 critical/high vulnerabilities
+- [ ] No hardcoded admin accounts
+- [ ] No test/debug credentials in codebase
+- [ ] CSRF protection enabled for forms
 
 ---
 
@@ -236,6 +523,11 @@ I'm about to deploy. Quickly check for critical security issues:
 | Auth check in UI only | Assumed backend was protected | Add backend authorization |
 | Trusting user input | AI doesn't validate by default | Add Zod/Yup validation |
 | Secrets in Git | Committed before .gitignore | Rotate secrets, clean history |
+| No rate limiting | AI doesn't add it by default | Add express-rate-limit |
+| Detailed error messages | Debugging left enabled | Use generic errors in production |
+| CORS set to `*` | Quick fix during development | Restrict to your domains |
+| Missing security headers | Not visible, easy to forget | Use helmet.js |
+| Outdated dependencies | AI suggests what it knows | Run npm audit regularly |
 
 ---
 
