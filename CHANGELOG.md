@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.3.0] - 2026-01-30
+
+### Changed
+- Moved `SECURITY.md` to repository root for visibility
+- Fixed FIC terminology: "Find →" replaces "Research →" in workflow contexts
+- Added 40% context rule heuristic notes (guideline, not hard limit)
+
+### Added
+- `templates/README.md` — Quick start for copying templates
+- Session Scripts section in `docs/getting-started.md`
+- "When to Reset Context" guidance
+- CI status badge in README
+
+### Removed
+- Internal files: `AI-FRAMEWORK-AUDIT.md`, `research/` folder
+
+---
+
 ## [1.2.2] - 2026-01-30
 
 ### Added
