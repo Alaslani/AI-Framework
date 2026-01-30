@@ -3,10 +3,15 @@
 ## Methodology Sources
 
 ### FIC (Find → Implement → Compound)
-- **Source**: "Advanced Context Engineering for Agents"
+- **Inspired by**: Dexter Horthy's "Research → Plan → Implement" pattern
+- **Source video**: "Advanced Context Engineering for Agents"
 - **Creator**: Dexter Horthy, Founder of Human Layer
 - **Link**: https://www.youtube.com/watch?v=IS_y40zY-hc
-- **Key insight**: Spec-first development, intentional context management, compaction strategies for scaling coding agents
+- **Original insight**: Spec-first development, intentional context management, keeping context utilization under 40%
+- **Adaptation**:
+  - "Research" renamed to "Find" (same purpose: understand system, locate files)
+  - "Compound" phase added for knowledge preservation and cross-session learning
+- **Adapted by**: AI-Framework methodology
 
 ### S2S (Signal-to-Status)
 - **Source**: "Agile is Dead, Long Live S2S"
