@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.3.1] - 2026-01-30
+
+### Added
+- `docs/golden-path.md` — Single-page cheat sheet for daily use
+  - Session start/end procedures
+  - Workflow selection guide
+  - Context management rules
+  - Thinking keywords reference
+  - Context reset triggers
+
+---
+
 ## [1.3.0] - 2026-01-30
 
 ### Changed
