@@ -1,9 +1,19 @@
-# AI-Framework 🛡️ 🤖
+<p align="center">
+  <img src="assets/logo.svg" alt="AI-Framework" width="800">
+</p>
 
-[![Version](https://img.shields.io/badge/version-1.2.2-blue)](CHANGELOG.md)
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](.github/CONTRIBUTING.md)
-[![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-orange)](#)
+<p align="center">
+  <strong>Bulletproof AI-Assisted Development</strong>
+</p>
+
+<p align="center">
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.2.2-blue" alt="Version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
+  <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
+  <img src="https://img.shields.io/badge/dependencies-zero-orange" alt="Zero Dependencies">
+</p>
+
+---
 
 A simple, scalable methodology for AI-assisted development.
 
