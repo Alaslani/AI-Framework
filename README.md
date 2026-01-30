@@ -38,6 +38,7 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
 
 - [Overview](docs/overview.md)
 - [Getting Started](docs/getting-started.md)
+- [Golden Path (Cheat Sheet)](docs/golden-path.md)
 - **Methodology**
   - [FIC Workflow](docs/methodology/fic-workflow.md)
   - [Phased Development](docs/methodology/phased-development.md)
