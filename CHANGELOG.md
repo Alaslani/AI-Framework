@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.3.3] - 2026-01-30
+
+### Added
+- `assets/s2s-diagram.svg` — Signal over Status visual diagram
+- S2S diagram added to README header
+
+---
+
 ## [1.3.2] - 2026-01-30
 
 ### Added
