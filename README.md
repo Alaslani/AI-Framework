@@ -14,6 +14,10 @@
   <a href="https://github.com/Alaslani/AI-Framework/actions"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="CI"></a>
 </p>
 
+<p align="center">
+  <img src="assets/fic-diagram.svg" alt="FIC Workflow: Find → Gate → Implement → Gate → Compound" width="700">
+</p>
+
 ---
 
 A simple, scalable methodology for AI-assisted development.
@@ -50,7 +54,11 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
   - [Subagent Usage](docs/patterns/subagent-usage.md)
   - [Context Warning Signs](docs/patterns/context-warning-signs.md)
   - [Cross-Project Patterns](docs/patterns/cross-project-patterns.md)
-  - [Vibe Coding Security](SECURITY.md)
+- **Guides**
+  - [Anti-Patterns](docs/anti-patterns.md)
+  - [Compound Checklist](docs/compound-checklist.md)
+  - [Exit Test](docs/exit-test.md)
+  - [FIC Loop Diagram](docs/fic-loop.md)
 - **Memory**
   - [AI Memory System](docs/memory/ai-memory-system.md)
   - [Cross-Project Learning](docs/memory/cross-project-learning.md)

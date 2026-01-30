@@ -139,6 +139,19 @@ Add to MASTER_REFERENCE:
 | "think harder" | Multi-system changes, edge cases |
 | "ultrathink" | Security, payments, critical systems |
 
+## Severity Levels
+
+Match effort to risk:
+
+| Level | Examples | Thinking | Verification | Documentation |
+|-------|----------|----------|--------------|---------------|
+| **Low** | UI tweaks, copy, config | "think" | Type check | Commit message |
+| **Medium** | Logic changes, refactors | "think hard" | + Lint + Build | Brief notes |
+| **High** | Auth, payments, data | "think harder" | + Manual test | Full FIC |
+| **Critical** | Security, money, permissions | "ultrathink" | + Code review | FIC + ADR |
+
+**Rule**: When in doubt, go one level higher.
+
 ## When to Use Full FIC
 
 | Situation | Workflow |

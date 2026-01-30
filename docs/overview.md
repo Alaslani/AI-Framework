@@ -36,6 +36,20 @@ Every session should make the next one better. Capture learnings, update your kn
 ### 6. Verification at Every Gate
 Trust but verify. Type check, lint, build, and test after every implementation phase.
 
+## Why AI Development Breaks
+
+AI development fails after week 2 because:
+
+| Problem | Result |
+|---------|--------|
+| Context drifts | Same mistakes repeated |
+| No explicit handoffs | Knowledge lost between sessions |
+| Speed without memory | Technical debt invisible until crisis |
+| "Model seemed confident" | Bugs ship to production |
+| Learnings evaporate | Team never improves |
+
+This framework exists to make AI development **sustainable**, not just fast.
+
 ## Who This Is For
 
 - **Solo developers** building side projects
