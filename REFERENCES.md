@@ -37,6 +37,7 @@
 ### AI-Assisted Development
 - [Human Layer](https://humanlayer.dev/) — Agent orchestration patterns
 - [Context7](https://context7.com/) — Library documentation for AI
+- [Claude Code Plugin Marketplace](https://claudemarketplaces.com/) — Community directory for Claude Code plugins and extensions
 
 ## Academic & Research
 

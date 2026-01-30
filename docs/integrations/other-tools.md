@@ -236,6 +236,23 @@ After every implementation phase:
 
 ---
 
+## Finding Plugins & Extensions
+
+### Claude Code Plugins
+- [Claude Code Plugin Marketplace](https://claudemarketplaces.com/) — Community directory for discovering plugins
+- Browse by category: development, productivity, testing, security
+- Includes both official Anthropic plugins and community collections
+
+### Cursor Extensions
+- Built-in extensions marketplace in Cursor
+- Community `.cursorrules` collections on GitHub
+
+### General Resources
+- [Awesome Claude Code](https://github.com/anthropics/anthropic-cookbook) — Official examples
+- GitHub search: `claude code plugin` or `cursor rules`
+
+---
+
 ## Tool Comparison
 
 | Feature | Claude Code | Cursor | Windsurf | Copilot | Aider | Cline |
