@@ -1,6 +1,6 @@
 # AI-Framework 🛡️ 🤖
 
-[![Version](https://img.shields.io/badge/version-1.2.0-blue)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.1-blue)](CHANGELOG.md)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](.github/CONTRIBUTING.md)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-orange)](#)
@@ -38,6 +38,7 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
   - [Subagent Usage](docs/patterns/subagent-usage.md)
   - [Context Warning Signs](docs/patterns/context-warning-signs.md)
   - [Cross-Project Patterns](docs/patterns/cross-project-patterns.md)
+  - [Vibe Coding Security](docs/patterns/vibe-coding-security.md)
 - **Memory**
   - [AI Memory System](docs/memory/ai-memory-system.md)
   - [Cross-Project Learning](docs/memory/cross-project-learning.md)
