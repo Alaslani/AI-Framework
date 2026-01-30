@@ -1,6 +1,9 @@
 # AI-Framework 🛡️ 🤖
 
+[![Version](https://img.shields.io/badge/version-1.2.0-blue)](CHANGELOG.md)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](.github/CONTRIBUTING.md)
+[![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-orange)](#)
 
 A simple, scalable methodology for AI-assisted development.
 
@@ -34,13 +37,16 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
   - [Decision Logging](docs/patterns/decision-logging.md)
   - [Subagent Usage](docs/patterns/subagent-usage.md)
   - [Context Warning Signs](docs/patterns/context-warning-signs.md)
+  - [Cross-Project Patterns](docs/patterns/cross-project-patterns.md)
 - **Memory**
   - [AI Memory System](docs/memory/ai-memory-system.md)
   - [Cross-Project Learning](docs/memory/cross-project-learning.md)
 - **Integrations**
   - [Notion](docs/integrations/notion.md)
   - [Prompt Templates](docs/integrations/prompt-templates.md)
+  - [Other Tools](docs/integrations/other-tools.md) — Cursor, Windsurf, Copilot, Aider
 - [Templates](templates/)
+- [Examples](examples/) — Filled templates for web, mobile, API projects
 - [References](REFERENCES.md) — Methodology sources and credits
 
 ## Quick Start
