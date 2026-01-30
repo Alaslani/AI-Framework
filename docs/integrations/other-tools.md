@@ -209,11 +209,10 @@ Regardless of which tool you use, these principles apply:
 All AI tools have context limits. Keep usage under 40% for best results.
 
 ### FIC Workflow
-The Research → Plan → Implement → Compound workflow works everywhere:
-1. **Research**: Understand before acting
-2. **Plan**: Define approach before coding
-3. **Implement**: One phase at a time with verification
-4. **Compound**: Capture learnings for next time
+The Find → Implement → Compound workflow works everywhere:
+1. **Find**: Understand before acting
+2. **Implement**: Plan, execute one phase at a time, verify
+3. **Compound**: Capture learnings for next time
 
 ### Transfer Packs
 Session handoffs are universal. Always document:

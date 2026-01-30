@@ -11,6 +11,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
   <img src="https://img.shields.io/badge/dependencies-zero-orange" alt="Zero Dependencies">
+  <a href="https://github.com/Alaslani/AI-Framework/actions"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="CI"></a>
 </p>
 
 ---
@@ -48,7 +49,7 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
   - [Subagent Usage](docs/patterns/subagent-usage.md)
   - [Context Warning Signs](docs/patterns/context-warning-signs.md)
   - [Cross-Project Patterns](docs/patterns/cross-project-patterns.md)
-  - [Vibe Coding Security](docs/patterns/vibe-coding-security.md)
+  - [Vibe Coding Security](SECURITY.md)
 - **Memory**
   - [AI Memory System](docs/memory/ai-memory-system.md)
   - [Cross-Project Learning](docs/memory/cross-project-learning.md)
@@ -59,6 +60,7 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
 - [Templates](templates/)
 - [Examples](examples/) — Filled templates for web, mobile, API projects
 - [References](REFERENCES.md) — Methodology sources and credits
+- [Security Guide](SECURITY.md) — Vibe coding security checklist
 
 ## Quick Start
 

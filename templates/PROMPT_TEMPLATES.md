@@ -33,6 +33,8 @@ Target Usage   = <40% (~68,000 tokens)
 Why?           = More room for work = better outputs
 ```
 
+**Note**: This is a heuristic, not a hard limit. For large migrations or audits, exceed 40% but use compaction strategies and explicit progress files.
+
 **If context > 60%**: Stop → Compact → New context window
 
 ### Review Hierarchy

@@ -24,7 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [1.2.1] - 2026-01-30
 
 ### Added
-- `docs/patterns/vibe-coding-security.md` — Security guide for AI-assisted development
+- `SECURITY.md` — Security guide for AI-assisted development (moved to root)
   - Covers exposed API keys, missing authorization, unvalidated input
   - Includes AI audit prompts and pre-deploy checklists
 

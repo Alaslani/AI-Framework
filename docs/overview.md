@@ -28,6 +28,8 @@ Don't just track status. Capture the **signal**—what you learned, why decision
 ### 4. Context Under Control
 AI assistants have context limits. Keep context under 40% for better reasoning. Compact when needed, start fresh between unrelated tasks.
 
+> **Note**: 40% is a guideline. Some tasks require more context — use compaction strategies when exceeding.
+
 ### 5. Knowledge Compounds
 Every session should make the next one better. Capture learnings, update your knowledge base, build institutional memory.
 

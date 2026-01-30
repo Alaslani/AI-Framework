@@ -40,13 +40,37 @@ Before ending:
 | Quick fix | <50 lines, single file | Direct implementation |
 | Standard task | 1 session | Plan briefly → implement |
 | Multi-phase | 2+ sessions | Full FIC workflow |
-| Complex feature | Multiple days | Research → Plan → Implement phases |
+| Complex feature | Multiple days | Find → Implement → Compound phases |
+
+## Session Scripts
+
+### Starting a Session
+
+1. Read your MASTER_REFERENCE
+2. Read latest TRANSFER_PACK (if exists)
+3. State your task clearly
+4. Follow appropriate workflow
+
+### Ending a Session
+
+1. Create/update TRANSFER_PACK with summary
+2. Add learnings to MASTER_REFERENCE
+3. Note blockers and next steps
+
+### When to Reset Context
+
+Start fresh when you see:
+
+- "I'll try a different approach"
+- Same error 3+ times
+- Context utilization > 60%
+- 10+ back-and-forth messages without progress
 
 ## Adoption Path
 
 | Week | Focus | What to Do |
 |------|-------|------------|
-| 1 | FIC Workflow | Use Research → Plan → Implement for all non-trivial tasks |
+| 1 | FIC Workflow | Use Find → Implement → Compound for all non-trivial tasks |
 | 2 | Context Management | Apply 40% rule, compact when needed |
 | 3 | Session Handoff | Use Transfer Packs between sessions |
 | 4 | Knowledge Persistence | Capture learnings systematically |

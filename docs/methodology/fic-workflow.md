@@ -84,7 +84,7 @@ Before coding:
 
 ### Execution Rules
 - One phase at a time
-- Keep context under 40%
+- Keep context under 40% (heuristic, not law — large audits may need 60%+, use explicit PROGRESS.md files)
 - Verify after each phase
 - Write progress manually (see below)
 
