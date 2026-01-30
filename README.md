@@ -18,6 +18,10 @@
   <img src="assets/fic-diagram.svg" alt="FIC Workflow: Find → Gate → Implement → Gate → Compound" width="700">
 </p>
 
+<p align="center">
+  <img src="assets/s2s-diagram.svg" alt="Signal over Status: Capture learnings, not just activities" width="700">
+</p>
+
 ---
 
 A simple, scalable methodology for AI-assisted development.
