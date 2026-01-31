@@ -3,7 +3,8 @@
 </p>
 
 <p align="center">
-  <strong>Bulletproof AI-Assisted Development</strong>
+  <strong>Bulletproof AI-Assisted Development</strong><br>
+  <em>Stop losing context. Start compounding knowledge.</em>
 </p>
 
 <p align="center">
@@ -11,7 +12,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
   <img src="https://img.shields.io/badge/dependencies-zero-orange" alt="Zero Dependencies">
-  <a href="https://github.com/Alaslani/AI-Framework/actions"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="CI"></a>
+  <a href="https://sahmx.com"><img src="https://img.shields.io/badge/used%20in-SahmX.com-blueviolet" alt="Used in SahmX.com"></a>
 </p>
 
 <p align="center">
@@ -28,17 +29,7 @@
 
 ---
 
-> **Zero dependencies** — No packages to install, no CLI tools, no configs. Just copy the markdown files and start working. Verification commands shown below are for *your* project's toolchain, not framework requirements.
-
-<p align="center">
-  → Copy this link and ask your AI: "Set up AI-Framework for my project"
-</p>
-
-```
-https://github.com/Alaslani/AI-Framework
-```
-
-A simple, scalable methodology for AI-assisted development.
+> **Zero dependencies** — No packages to install, no CLI tools, no configs. Just copy the markdown files and start working.
 
 ## Introduction
 
@@ -48,6 +39,23 @@ AI-Framework solves these problems with a structured methodology that works for 
 
 This is not a boilerplate or template. It's an opinionated guide based on patterns proven across 50+ development sessions. Use what works for you, adapt what doesn't, and stay consistent.
 
+## Quick Start
+
+```bash
+# Copy templates to your project
+cp -r templates/ /path/to/your/project/
+```
+
+1. Fill in `MASTER_REFERENCE.md` with your project details
+2. Start every AI session by pointing to your MASTER_REFERENCE
+3. Use `TRANSFER_PACK.md` to hand off between sessions
+4. Capture learnings after each session — knowledge compounds
+
+> **One-liner setup:** Copy this link and tell your AI: *"Set up AI-Framework for my project"*
+> ```
+> https://github.com/Alaslani/AI-Framework
+> ```
+
 ## What makes a project "bulletproof"?
 
 - **Clarity over speed** — Know what to build before building it
@@ -56,7 +64,8 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
 - **Knowledge compounds** — Every session makes the next one better
 - **Verification at every gate** — Type check, lint, build, test
 
-## Table of Contents
+<details>
+<summary><strong>Table of Contents</strong></summary>
 
 - [Overview](docs/overview.md)
 - [Getting Started](docs/getting-started.md)
@@ -92,13 +101,7 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
 - [References](REFERENCES.md) — Methodology sources and credits
 - [Security Guide](SECURITY.md) — Vibe coding security checklist
 
-## Quick Start
-
-1. Copy `templates/MASTER_REFERENCE.md` to your project
-2. Fill in project-specific sections
-3. Start every AI session by pointing to your MASTER_REFERENCE
-4. Use `templates/TRANSFER_PACK.md` to hand off between sessions
-5. Capture learnings in your MASTER_REFERENCE after each session
+</details>
 
 ## The PACK System
 
@@ -111,86 +114,17 @@ This is not a boilerplate or template. It's an opinionated guide based on patter
 | **TRANSFER_PACK** | Session handoff (the memory) | Every session end |
 | **PROMPT_TEMPLATES** | Command patterns (the language) | As workflows evolve |
 
-## Workflow Quick Reference
+## Core Workflow
 
-### Setup (Once)
-
-```bash
-# Copy templates to your project
-cp -r templates/ /path/to/your/project/
-```
-
-### Every Session
-
-**Start:**
-
-```
-1. Read MASTER_REFERENCE
-2. Read TRANSFER_PACK (if exists)
-3. State task → Pick workflow
-```
-
-**End:**
-
-```
-1. Update TRANSFER_PACK
-2. Add learnings to MASTER_REFERENCE
-3. Note next steps
-```
-
-### FIC Workflow
-
-| Phase | Action | Output |
-|-------|--------|--------|
+| Phase | What You Do | Output |
+|-------|-------------|--------|
 | **Find** | Understand files, data flow, constraints | Research notes |
-| **Implement** | Plan (3-5 phases) → Execute → Verify | Working code |
+| **Implement** | Plan → Execute → Verify (per phase) | Working code |
 | **Compound** | Capture learnings | Updated knowledge |
 
-### Verification (After Every Phase)
+**Context rule:** Keep under 40%. Reset at 60% or after 3 repeated errors.
 
-```bash
-# JavaScript/TypeScript
-npm run type-check && npm run lint && npm run build && npm run test
-
-# Python
-mypy . && ruff check . && pytest
-
-# Generic
-# 1. Type check
-# 2. Lint
-# 3. Build
-# 4. Test
-```
-
-### Context Check (Claude Code)
-
-```bash
-# Check context usage
-/tokens
-
-# Clear if needed
-/clear
-
-# Compact with care (prefer manual PROGRESS.md)
-```
-
-### When to Use What
-
-| Task | Workflow |
-|------|----------|
-| Quick fix (<50 lines) | Direct implement |
-| Clear scope, single file | Brief plan → implement |
-| Multi-file feature | Full FIC |
-| Unknown territory | FIC + extra Find |
-
-### Context Rules
-
-| Rule | Threshold |
-|------|-----------|
-| Target context | < 40% |
-| Reset context | > 60% or same error 3x |
-
-> See [Golden Path](GOLDEN_PATH.md) for full cheat sheet.
+> See **[Golden Path](GOLDEN_PATH.md)** for the complete workflow cheat sheet.
 
 ## Contributing
 
