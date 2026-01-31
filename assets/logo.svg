@@ -41,7 +41,7 @@
   <rect x="440" y="470" width="400" height="3" rx="1.5" fill="url(#accent)" opacity="0.6"/>
 
   <!-- Feature badges -->
-  <g transform="translate(640, 520)" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#64748b">
+  <g transform="translate(640, 520)" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8">
     <text x="-200" y="0" text-anchor="middle">Zero Dependencies</text>
     <text x="0" y="0" text-anchor="middle">FIC Methodology</text>
     <text x="200" y="0" text-anchor="middle">Tool Agnostic</text>

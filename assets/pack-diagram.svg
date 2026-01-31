@@ -3,44 +3,44 @@
   <rect width="700" height="280" fill="none"/>
 
   <!-- Title -->
-  <text x="350" y="28" text-anchor="middle" font-family="system-ui, Arial" font-size="16" font-weight="600" fill="#1F2937">PACK System</text>
-  <text x="350" y="48" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#6B7280">Project Artifacts for Context Knowledge</text>
+  <text x="350" y="28" text-anchor="middle" font-family="system-ui, Arial" font-size="16" font-weight="600" fill="#94A3B8">PACK System</text>
+  <text x="350" y="48" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#94A3B8">Project Artifacts for Context Knowledge</text>
 
   <!-- MASTER_REFERENCE Box -->
   <rect x="30" y="75" width="145" height="110" rx="10" fill="#EEF2FF" stroke="#6366F1" stroke-width="2"/>
   <text x="102" y="100" text-anchor="middle" font-family="system-ui, Arial" font-size="12" font-weight="600" fill="#4F46E5">MASTER_REFERENCE</text>
-  <text x="102" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">The Brain</text>
+  <text x="102" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">The Brain</text>
   <line x1="50" y1="130" x2="155" y2="130" stroke="#C7D2FE" stroke-width="1"/>
-  <text x="102" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Permanent knowledge</text>
-  <text x="102" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Decisions + Learnings</text>
-  <text x="102" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Architecture</text>
+  <text x="102" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Permanent knowledge</text>
+  <text x="102" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Decisions + Learnings</text>
+  <text x="102" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Architecture</text>
 
   <!-- ROADMAP Box -->
   <rect x="195" y="75" width="145" height="110" rx="10" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
   <text x="267" y="100" text-anchor="middle" font-family="system-ui, Arial" font-size="12" font-weight="600" fill="#16A34A">ROADMAP</text>
-  <text x="267" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">The Plan</text>
+  <text x="267" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">The Plan</text>
   <line x1="215" y1="130" x2="320" y2="130" stroke="#BBF7D0" stroke-width="1"/>
-  <text x="267" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Priority queue</text>
-  <text x="267" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Milestones</text>
-  <text x="267" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Direction</text>
+  <text x="267" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Priority queue</text>
+  <text x="267" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Milestones</text>
+  <text x="267" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Direction</text>
 
   <!-- TRANSFER_PACK Box -->
   <rect x="360" y="75" width="145" height="110" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
   <text x="432" y="100" text-anchor="middle" font-family="system-ui, Arial" font-size="12" font-weight="600" fill="#D97706">TRANSFER_PACK</text>
-  <text x="432" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">The Memory</text>
+  <text x="432" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">The Memory</text>
   <line x1="380" y1="130" x2="485" y2="130" stroke="#FDE68A" stroke-width="1"/>
-  <text x="432" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Session handoff</text>
-  <text x="432" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">What's blocked</text>
-  <text x="432" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Next steps</text>
+  <text x="432" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Session handoff</text>
+  <text x="432" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">What's blocked</text>
+  <text x="432" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Next steps</text>
 
   <!-- PROMPT_TEMPLATES Box -->
   <rect x="525" y="75" width="145" height="110" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="2"/>
   <text x="597" y="100" text-anchor="middle" font-family="system-ui, Arial" font-size="12" font-weight="600" fill="#DC2626">PROMPT_TEMPLATES</text>
-  <text x="597" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">The Language</text>
+  <text x="597" y="120" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">The Language</text>
   <line x1="545" y1="130" x2="650" y2="130" stroke="#FECACA" stroke-width="1"/>
-  <text x="597" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Command patterns</text>
-  <text x="597" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Workflow triggers</text>
-  <text x="597" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#6B7280">Checklists</text>
+  <text x="597" y="148" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Command patterns</text>
+  <text x="597" y="162" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Workflow triggers</text>
+  <text x="597" y="176" text-anchor="middle" font-family="system-ui, Arial" font-size="9" fill="#94A3B8">Checklists</text>
 
   <!-- Connection arrows -->
   <path d="M102 185 L102 210 L350 210" stroke="#9CA3AF" stroke-width="1.5" fill="none"/>
@@ -52,6 +52,6 @@
   <circle cx="350" cy="210" r="4" fill="#9CA3AF"/>
 
   <!-- Bottom insight box -->
-  <rect x="150" y="230" width="400" height="35" rx="6" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
-  <text x="350" y="252" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#374151">Session start: Read all four → Session end: Update as needed</text>
+  <rect x="150" y="230" width="400" height="35" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+  <text x="350" y="252" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#E2E8F0">Session start: Read all four → Session end: Update as needed</text>
 </svg>

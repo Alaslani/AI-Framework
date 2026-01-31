@@ -3,15 +3,15 @@
   <rect width="800" height="320" fill="none"/>
 
   <!-- Title -->
-  <text x="400" y="30" text-anchor="middle" font-family="system-ui, Arial" font-size="16" font-weight="600" fill="#1F2937">Spec to Signal (S2S)</text>
-  <text x="400" y="50" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#6B7280">Progress = reduced uncertainty, not throughput</text>
+  <text x="400" y="30" text-anchor="middle" font-family="system-ui, Arial" font-size="16" font-weight="600" fill="#94A3B8">Spec to Signal (S2S)</text>
+  <text x="400" y="50" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#94A3B8">Progress = reduced uncertainty, not throughput</text>
 
   <!-- SPEC Box -->
   <rect x="50" y="80" width="160" height="100" rx="10" fill="#EEF2FF" stroke="#6366F1" stroke-width="2"/>
   <text x="130" y="110" text-anchor="middle" font-family="system-ui, Arial" font-size="15" font-weight="600" fill="#4F46E5">SPEC</text>
-  <text x="130" y="130" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">Intent</text>
-  <text x="130" y="145" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">Assumptions</text>
-  <text x="130" y="160" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">Constraints</text>
+  <text x="130" y="130" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">Intent</text>
+  <text x="130" y="145" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">Assumptions</text>
+  <text x="130" y="160" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">Constraints</text>
 
   <!-- Arrow 1 -->
   <path d="M210 130 L270 130" stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)"/>
@@ -19,9 +19,9 @@
   <!-- BUILD Box -->
   <rect x="270" y="80" width="160" height="100" rx="10" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
   <text x="350" y="110" text-anchor="middle" font-family="system-ui, Arial" font-size="15" font-weight="600" fill="#16A34A">BUILD</text>
-  <text x="350" y="130" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">AI-collapsed</text>
-  <text x="350" y="145" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">execution</text>
-  <text x="350" y="160" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">(hours, not weeks)</text>
+  <text x="350" y="130" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">AI-collapsed</text>
+  <text x="350" y="145" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">execution</text>
+  <text x="350" y="160" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">(hours, not weeks)</text>
 
   <!-- Arrow 2 -->
   <path d="M430 130 L490 130" stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)"/>
@@ -29,8 +29,8 @@
   <!-- DEPLOY Box -->
   <rect x="490" y="80" width="100" height="100" rx="10" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
   <text x="540" y="115" text-anchor="middle" font-family="system-ui, Arial" font-size="15" font-weight="600" fill="#D97706">DEPLOY</text>
-  <text x="540" y="140" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">Live</text>
-  <text x="540" y="155" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">system</text>
+  <text x="540" y="140" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">Live</text>
+  <text x="540" y="155" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">system</text>
 
   <!-- Arrow 3 -->
   <path d="M590 130 L650 130" stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)"/>
@@ -38,17 +38,17 @@
   <!-- SIGNAL Box -->
   <rect x="650" y="80" width="130" height="100" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-width="2"/>
   <text x="715" y="110" text-anchor="middle" font-family="system-ui, Arial" font-size="15" font-weight="600" fill="#DC2626">SIGNAL</text>
-  <text x="715" y="130" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">Telemetry</text>
-  <text x="715" y="145" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">Usage</text>
-  <text x="715" y="160" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#6B7280">Evidence</text>
+  <text x="715" y="130" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">Telemetry</text>
+  <text x="715" y="145" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">Usage</text>
+  <text x="715" y="160" text-anchor="middle" font-family="system-ui, Arial" font-size="10" fill="#94A3B8">Evidence</text>
 
   <!-- Feedback Loop Arrow -->
   <path d="M715 180 L715 230 L130 230 L130 180" stroke="#6366F1" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrow-purple)"/>
   <text x="420" y="250" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#6366F1">Signal refines Spec → Close distance between assumption and reality</text>
 
   <!-- Bottom insight -->
-  <rect x="200" y="275" width="400" height="30" rx="6" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
-  <text x="400" y="295" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#374151">Step → Feedback → Adjust → Repeat (relentless correction)</text>
+  <rect x="200" y="275" width="400" height="30" rx="6" fill="#334155" stroke="#475569" stroke-width="1"/>
+  <text x="400" y="295" text-anchor="middle" font-family="system-ui, Arial" font-size="11" fill="#E2E8F0">Step → Feedback → Adjust → Repeat (relentless correction)</text>
 
   <!-- Arrow markers -->
   <defs>
