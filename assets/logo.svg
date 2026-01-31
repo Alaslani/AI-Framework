@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+    </pattern>
+    <rect width="1280" height="640" fill="url(#grid)"/>
+  </g>
+
+  <!-- Icon: Brain + Code -->
+  <g transform="translate(540, 180)">
+    <!-- Left bracket -->
+    <path d="M 60 0 L 20 0 L 20 120 L 60 120" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Right bracket -->
+    <path d="M 140 0 L 180 0 L 180 120 L 140 120" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- AI symbol in center -->
+    <text x="100" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="60" font-weight="700" fill="white" text-anchor="middle">AI</text>
+  </g>
+
+  <!-- Main title -->
+  <text x="640" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle">AI-Framework</text>
+
+  <!-- Tagline -->
+  <text x="640" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" fill="#94a3b8" text-anchor="middle">Bulletproof AI-Assisted Development</text>
+
+  <!-- Decorative line -->
+  <rect x="440" y="470" width="400" height="3" rx="1.5" fill="url(#accent)" opacity="0.6"/>
+
+  <!-- Feature badges -->
+  <g transform="translate(640, 520)" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#64748b">
+    <text x="-200" y="0" text-anchor="middle">Zero Dependencies</text>
+    <text x="0" y="0" text-anchor="middle">FIC Methodology</text>
+    <text x="200" y="0" text-anchor="middle">Tool Agnostic</text>
+  </g>
+
+  <!-- Dots separator -->
+  <circle cx="540" cy="516" r="3" fill="#475569"/>
+  <circle cx="740" cy="516" r="3" fill="#475569"/>
+</svg>
