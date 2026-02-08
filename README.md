@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.4.0-blue" alt="Version"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.5.0-blue" alt="Version"></a>
   <a href="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="Lint"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
@@ -83,6 +83,7 @@ cp -r templates/ /path/to/your/project/
   - [Subagent Usage](docs/patterns/subagent-usage.md)
   - [Context Warning Signs](docs/patterns/context-warning-signs.md)
   - [Cross-Project Patterns](docs/patterns/cross-project-patterns.md)
+  - [Parallel Development](docs/patterns/parallel-development.md)
 - **Guides**
   - [Anti-Patterns](docs/anti-patterns.md)
   - [Compound Checklist](docs/compound-checklist.md)
@@ -96,6 +97,7 @@ cp -r templates/ /path/to/your/project/
 - **Integrations**
   - [Notion](docs/integrations/notion.md)
   - [Prompt Templates](docs/integrations/prompt-templates.md)
+  - [Claude Code](docs/integrations/claude-code.md) — Plan mode, /rewind, prompt escalation
   - [Other Tools](docs/integrations/other-tools.md) — Cursor, Windsurf, Copilot, Aider
 - [Templates](templates/)
 - [Examples](examples/) — Filled templates for web, mobile, API projects
