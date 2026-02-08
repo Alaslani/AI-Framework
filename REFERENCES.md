@@ -21,6 +21,14 @@
 - **Flow**: Spec (intent, assumptions) → Build (AI-collapsed) → Deploy → Signal (evidence) → Learn
 - **Why it matters**: When execution cost collapses, clarity becomes the bottleneck. The work shifts from building to learning.
 
+### Claude Code Best Practices
+- **Source**: "10 Tips for Claude Code" thread
+- **Author**: Boris Cherny (@bcherny), Anthropic Claude Code team
+- **Date**: February 1, 2026
+- **Platform**: X (Twitter)
+- **Key patterns**: Parallel worktrees, plan-then-review, CLAUDE.md investment, prompt escalation, /rewind, subagent spawning, permission hooks
+- **Adapted into**: `docs/patterns/parallel-development.md`, `docs/integrations/claude-code.md`
+
 ## Real-World Implementation
 
 ### SahmX

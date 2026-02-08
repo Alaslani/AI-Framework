@@ -6,6 +6,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.5.0] - 2026-02-08
+
+### Added
+- `docs/patterns/parallel-development.md` — Git worktrees for parallel AI sessions
+- `docs/integrations/claude-code.md` — Dedicated Claude Code integration guide
+  - Plan mode, /rewind, CLAUDE.md investment, skills/commands
+  - Subagent patterns, permission hooks, prompt escalation
+  - /statusline, context management thresholds
+- Prompt Escalation Patterns in PROMPT_TEMPLATES (Elegant Solution, Grill, Prove It Works)
+
+### Changed
+- `docs/patterns/context-warning-signs.md` — Added /rewind as Step 2 in Recovery Pattern (before "start fresh")
+- `templates/PROMPT_TEMPLATES.md` — New Section 8 (Prompt Escalation), version bumped to 1.2
+
+### Attribution
+- Boris Cherny (@bcherny), Anthropic Claude Code team — "10 Tips for Claude Code" thread (Feb 1, 2026)
+
+---
+
 ## [1.4.0] - 2026-01-30
 
 ### Added

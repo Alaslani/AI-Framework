@@ -246,7 +246,48 @@ Not sure?            → Start with /research
 
 ---
 
-## 8. Common Mistakes
+## 8. Prompt Escalation Patterns
+
+Three patterns for pushing past a mediocre first attempt:
+
+### The Elegant Solution
+
+After a working but messy implementation:
+
+```
+"Knowing everything you know now, scrap this and implement the elegant solution."
+```
+
+Forces a clean rewrite using all context gathered during the first pass. Works best after Claude has seen the full problem space.
+
+### The Grill
+
+Before merging or deploying:
+
+```
+"Grill me on these changes. Don't make a PR until I pass your test."
+```
+
+Makes the AI your adversarial reviewer. It will find edge cases, missing tests, and logic errors you missed.
+
+### Prove It Works
+
+After implementation:
+
+```
+"Prove to me this works. Diff the behavior between main and this branch."
+```
+
+Concrete proof over assertions. The AI runs both versions and compares output.
+
+**When to use which**:
+- First pass feels hacky → Elegant Solution
+- About to ship → Grill
+- Need confidence → Prove It Works
+
+---
+
+## 9. Common Mistakes
 
 | ❌ Don't | ✅ Do |
 |----------|-------|
@@ -260,7 +301,7 @@ Not sure?            → Start with /research
 
 ---
 
-## 9. Verification Checklist
+## 10. Verification Checklist
 
 After EVERY implementation:
 
@@ -280,7 +321,7 @@ After EVERY implementation:
 
 ---
 
-## 10. References
+## 11. References
 
 ### FIC Methodology
 - **Inspired by**: Dexter Horthy's "Research → Plan → Implement" pattern
@@ -297,5 +338,5 @@ After EVERY implementation:
 
 ---
 
-*Version: 1.1*
-*Added: Section 0 (Context Engineering), Research output format, Subagent purpose, Common Mistakes, References*
+*Version: 1.2*
+*Added: Section 8 (Prompt Escalation Patterns)*

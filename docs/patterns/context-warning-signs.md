@@ -36,12 +36,15 @@ This usually means:
 ## The Recovery Pattern
 
 ```
-1. STOP   - Don't send another message
-2. SAVE   - Write a PROGRESS.md with current state
-3. FRESH  - Start new context window
-4. ONBOARD - Paste PROGRESS.md as context
-5. CONTINUE - Resume from last known good state
+1. STOP   — Don't send another message
+2. REWIND — Try /rewind first (keeps a summary of what was tried)
+3. SAVE   — If rewind isn't enough, write a PROGRESS.md
+4. FRESH  — Start new context window
+5. ONBOARD — Paste PROGRESS.md as context
+6. CONTINUE — Resume from last known good state
 ```
+
+**Note**: Step 2 (/rewind) is preferred over starting fresh because learnings survive the rollback. Only proceed to steps 3-6 if the problem requires a completely clean context. See [Claude Code Integration](../integrations/claude-code.md) for details.
 
 ## Key Insight
 
