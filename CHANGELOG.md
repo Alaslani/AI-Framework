@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [1.6.0] - 2026-02-12
+
+### Added
+- `DATA_INTEGRITY.md` — Data integrity guide for AI-assisted development
+  - Ghost Column detection pattern (BaaS clients silently return undefined for non-existent columns)
+  - Write/Read Path Mismatch tracing methodology (critical path documentation)
+  - Silent Callback/Webhook failure prevention (schema-validated integration tests)
+  - Prevention checklist, AI audit prompts, and common mistakes table
+- Data Integrity Guide added to README table of contents
+
+### Context
+- Born from discovering 67 silent ghost columns in a production codebase
+- BaaS platforms (Supabase, Firebase, Hasura) don't validate column names at runtime
+- Traditional testing catches logic errors but misses column name mismatches
+
+---
+
 ## [1.5.0] - 2026-02-08
 
 ### Added

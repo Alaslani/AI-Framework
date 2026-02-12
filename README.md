@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.5.0-blue" alt="Version"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.6.0-blue" alt="Version"></a>
   <a href="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="Lint"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
@@ -103,6 +103,7 @@ cp -r templates/ /path/to/your/project/
 - [Examples](examples/) — Filled templates for web, mobile, API projects
 - [References](REFERENCES.md) — Methodology sources and credits
 - [Security Guide](SECURITY.md) — Vibe coding security checklist
+  - [Data Integrity Guide](DATA_INTEGRITY.md) — Ghost columns, write/read mismatches, webhook validation
 
 </details>
 
