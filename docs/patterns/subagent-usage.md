@@ -1,5 +1,8 @@
 # Subagent Usage
 
+> **Note**: Subagents are a Claude Code feature. If you're using Claude AI (chat),
+> skip this doc — see [Claude AI Integration](../integrations/claude-ai.md) instead.
+
 Subagents are spawned AI sessions. Use them for **context control**, not role-play.
 
 ## Purpose

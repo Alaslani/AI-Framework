@@ -27,7 +27,7 @@
 - **Date**: February 1, 2026
 - **Platform**: X (Twitter)
 - **Key patterns**: Parallel worktrees, plan-then-review, CLAUDE.md investment, prompt escalation, /rewind, subagent spawning, permission hooks
-- **Adapted into**: `docs/patterns/parallel-development.md`, `docs/integrations/claude-code.md`
+- **Adapted into**: `docs/integrations/claude-code.md` (includes parallel development patterns)
 
 ## Real-World Implementation
 
@@ -36,6 +36,14 @@
 - **Scale**: 3 production portals, 60+ day sprint to launch
 - **Repo**: Private (methodology extracted into this framework)
 - **Validation**: 340+ learnings captured, 50+ sessions managed
+
+### Integration Guides
+
+Claude-specific patterns are documented in dedicated integration guides:
+
+- `docs/integrations/claude-ai.md` — Claude AI Projects, Memory, artifacts
+- `docs/integrations/claude-code.md` — Claude Code terminal agent (includes parallel development)
+- `docs/integrations/other-tools.md` — Cursor, Windsurf, Copilot, Aider, Cline
 
 ## External Resources
 

@@ -141,4 +141,36 @@ Both are wrong. Match the tool to the task.
 
 ---
 
+## When NOT to Use This Framework
+
+### Skip FIC For
+
+| Scenario | Why |
+|----------|-----|
+| One-off scripts | No future sessions to hand off to |
+| Throwaway experiments | Learning, not building |
+| Hackathon spikes | Speed > sustainability (intentionally) |
+| Tasks under 30 minutes | Overhead exceeds value |
+| Solo exploration | You ARE the context |
+
+### The Decision Rule
+
+Ask: **"Will future-me or someone else need to understand this?"**
+
+- Yes → Use framework
+- No → Skip it
+
+### Partial Adoption
+
+You don't need all-or-nothing:
+
+| Situation | Use |
+|-----------|-----|
+| Quick fix, want to remember why | Just Compound |
+| Exploring unfamiliar code | Just Find |
+| Know what to build, multi-step | Just Implement phases |
+| Complex feature | Full FIC |
+
+---
+
 *Frameworks fail from misuse, not missing features.*

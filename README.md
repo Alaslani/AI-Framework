@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-1.6.0-blue" alt="Version"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-2.0.0-blue" alt="Version"></a>
   <a href="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="Lint"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
@@ -52,10 +52,57 @@ cp -r templates/ /path/to/your/project/
 3. Use `TRANSFER_PACK.md` to hand off between sessions
 4. Capture learnings after each session — knowledge compounds
 
-> **One-liner setup:** Copy this link and tell your AI: *"Set up AI-Framework for my project"*
-> ```
-> https://github.com/Alaslani/AI-Framework
-> ```
+> **AI-assisted setup:** Give your AI this repo URL and say *"Set up AI-Framework for my project"* — it knows what to do.
+
+## AI Setup Instructions
+
+> If you're an AI assistant helping someone set up this framework, follow these steps.
+
+### Step 1: Copy Templates
+
+Copy all 4 files from `templates/` into the user's project root:
+
+- `MASTER_REFERENCE.md`
+- `TRANSFER_PACK.md`
+- `ROADMAP.md`
+- `PROMPT_TEMPLATES.md`
+
+### Step 2: Fill In Master Reference
+
+Ask the user about their project and fill in `MASTER_REFERENCE.md`:
+
+- Project name and description
+- Repository and production URLs
+- Tech stack (frontend, backend, database, hosting)
+- Key commands (dev, build, test, deploy)
+- Any existing architecture decisions or patterns
+
+### Step 3: Tool-Specific Setup
+
+Ask: "Are you using Claude AI (chat), Claude Code (terminal), or another tool?"
+
+| Tool | Action |
+|------|--------|
+| **Claude AI** | Walk them through `PROJECT_INSTRUCTIONS.md` — help them fill in the template, set up a Claude Project, and upload PACK docs as Project Knowledge |
+| **Claude Code** | Point to `docs/integrations/claude-code.md` — they already have `CLAUDE.md` auto-read. Help set up `.claude/` directory and CLAUDE.md in their project |
+| **Cursor** | Point to `docs/integrations/other-tools.md` — help create `.cursorrules` from MASTER_REFERENCE |
+| **Windsurf** | Point to `docs/integrations/other-tools.md` — help create `.windsurfrules` from MASTER_REFERENCE |
+| **Other** | Point to `docs/integrations/other-tools.md` — adapt the general pattern |
+
+### Step 4: Generate Starting Documents
+
+- Fill in `ROADMAP.md` with their current priorities (ask what they're working on)
+- Create their first `TRANSFER_PACK.md` as a starting point
+- Set up `docs/memory-setup.md` memory template with their details
+
+### Step 5: Verify Setup
+
+Confirm the user has:
+
+- [ ] 4 PACK documents filled in their project
+- [ ] Tool-specific setup complete (Project Instructions, CLAUDE.md, or .cursorrules)
+- [ ] Memory configured (if using Claude AI)
+- [ ] First session ready to start with `/research` or `/plan`
 
 ## What makes a project "bulletproof"?
 
@@ -70,7 +117,9 @@ cp -r templates/ /path/to/your/project/
 
 - [Overview](docs/overview.md)
 - [Getting Started](docs/getting-started.md)
-- [Golden Path (Cheat Sheet)](GOLDEN_PATH.md)
+- **Setup**
+  - [PROJECT_INSTRUCTIONS.md](PROJECT_INSTRUCTIONS.md) — Claude AI Project setup (copy-paste)
+  - CLAUDE.md — Claude Code auto-reads this (no action needed)
 - **Methodology**
   - [FIC Workflow](docs/methodology/fic-workflow.md)
   - [PACK System](docs/methodology/pack-system.md)
@@ -80,30 +129,22 @@ cp -r templates/ /path/to/your/project/
   - [Session Handoff](docs/patterns/session-handoff.md)
   - [Project Knowledge](docs/patterns/project-knowledge.md)
   - [Decision Logging](docs/patterns/decision-logging.md)
-  - [Subagent Usage](docs/patterns/subagent-usage.md)
+  - [Subagent Usage](docs/patterns/subagent-usage.md) — Claude Code
   - [Context Warning Signs](docs/patterns/context-warning-signs.md)
   - [Cross-Project Patterns](docs/patterns/cross-project-patterns.md)
-  - [Parallel Development](docs/patterns/parallel-development.md)
 - **Guides**
-  - [Anti-Patterns](docs/anti-patterns.md)
-  - [Compound Checklist](docs/compound-checklist.md)
-  - [Exit Test](docs/exit-test.md)
-  - [FIC Loop Diagram](docs/fic-loop.md)
-  - [Framework Contract](FRAMEWORK_CONTRACT.md)
-- **Memory**
+  - [Anti-Patterns](docs/anti-patterns.md) — includes "When NOT to Use"
   - [Memory Setup](docs/memory-setup.md)
-  - [AI Memory System](docs/memory/ai-memory-system.md)
-  - [Cross-Project Learning](docs/memory/cross-project-learning.md)
 - **Integrations**
+  - [Claude AI](docs/integrations/claude-ai.md) — Projects, Memory, artifacts
+  - [Claude Code](docs/integrations/claude-code.md) — Subagents, /rewind, CLAUDE.md, worktrees
   - [Notion](docs/integrations/notion.md)
-  - [Prompt Templates](docs/integrations/prompt-templates.md)
-  - [Claude Code](docs/integrations/claude-code.md) — Plan mode, /rewind, prompt escalation
   - [Other Tools](docs/integrations/other-tools.md) — Cursor, Windsurf, Copilot, Aider
 - [Templates](templates/)
-- [Examples](examples/) — Filled templates for web, mobile, API projects
+- [Examples](examples/) — Filled templates for web app
 - [References](REFERENCES.md) — Methodology sources and credits
 - [Security Guide](SECURITY.md) — Vibe coding security checklist
-  - [Data Integrity Guide](DATA_INTEGRITY.md) — Ghost columns, write/read mismatches, webhook validation
+  - [Data Integrity Guide](DATA_INTEGRITY.md) — Ghost columns, write/read mismatches
 
 </details>
 
@@ -128,7 +169,7 @@ cp -r templates/ /path/to/your/project/
 
 **Context rule:** Keep under 40%. Reset at 60% or after 3 repeated errors.
 
-> See **[Golden Path](GOLDEN_PATH.md)** for the complete workflow cheat sheet.
+> See **[FIC Workflow](docs/methodology/fic-workflow.md)** for the complete methodology, or **[Getting Started](docs/getting-started.md)** for a quick-start guide.
 
 ## Contributing
 

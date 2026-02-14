@@ -146,4 +146,49 @@ The AI will confirm the memory has been saved. Verify by starting a new session 
 
 ---
 
+## CLAUDE.md Convention
+
+Project-level AI instructions in your repository:
+
+```
+project/
+├── CLAUDE.md           # Checked into git
+├── CLAUDE.local.md     # Gitignored (personal prefs)
+└── features/
+    └── auth/
+        └── CLAUDE.md   # Feature-specific context
+```
+
+### CLAUDE.md Content
+
+```markdown
+# Project: [Name]
+
+## Context
+[2-3 sentences about the project]
+
+## Tech Stack
+[Key technologies]
+
+## Conventions
+[Coding standards, patterns used]
+
+## Current Focus
+[What's being worked on]
+```
+
+---
+
+## Memory Anti-Patterns
+
+| Anti-Pattern | Problem | Fix |
+|--------------|---------|-----|
+| Too vague | "Be helpful" | Already default — remove |
+| Too detailed | 20+ lines | Put in external doc |
+| Redundant | Same rule twice | Combine |
+| One-time tasks | "Fix bug X" | Use task tracker |
+| Volatile info | "Current sprint" | Changes too often |
+
+---
+
 *If your memory is longer than 4-7 lines, it's too long.*

@@ -112,4 +112,4 @@ Updating status to Done."
 
 ---
 
-*Next: [Prompt Templates](prompt-templates.md)*
+*Next: [Claude AI](claude-ai.md)*

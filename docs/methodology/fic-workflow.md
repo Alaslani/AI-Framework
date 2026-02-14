@@ -7,23 +7,56 @@ The core workflow for AI-assisted development.
 ## Overview
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  1. FIND (Research)                                 │
-│     ├── Understand: files, data flow, dependencies  │
-│     ├── Output: research/[feature].md               │
-│     └── CHECKPOINT: "Understanding correct?"        │
-│                      ↓                              │
-│  2. IMPLEMENT (Plan + Execute)                      │
-│     ├── Plan: phases, files, verification           │
-│     ├── Execute: one phase at a time                │
-│     ├── Verify: after each phase                    │
-│     └── CHECKPOINT: "Working as expected?"          │
-│                      ↓                              │
-│  3. COMPOUND (Learn)                                │
-│     ├── Capture: what worked, what didn't           │
-│     └── Update: knowledge base                      │
-└─────────────────────────────────────────────────────┘
+                    ┌─────────────────┐
+                    │      TASK       │
+                    └────────┬────────┘
+                             │
+                             ▼
+         ┌───────────────────────────────────┐
+         │              FIND                 │
+         │   Understand files, data flow,    │
+         │   dependencies, constraints       │
+         └───────────────────┬───────────────┘
+                             │
+                             ▼
+                    ┌────────────────┐
+                    │   GATE: OK?    │───No──→ Back to Find
+                    └────────┬───────┘
+                             │ Yes
+                             ▼
+         ┌───────────────────────────────────┐
+         │           IMPLEMENT               │
+         │   Plan → Execute → Verify         │
+         │   (one phase at a time)           │
+         └───────────────────┬───────────────┘
+                             │
+                             ▼
+                    ┌────────────────┐
+                    │   GATE: OK?    │───No──→ Back to Implement
+                    └────────┬───────┘
+                             │ Yes
+                             ▼
+         ┌───────────────────────────────────┐
+         │           COMPOUND                │
+         │   Capture learnings, update       │
+         │   knowledge base                  │
+         └───────────────────┬───────────────┘
+                             │
+                             ▼
+              ┌──────────────────────────┐
+              │  Knowledge feeds next    │
+              │  Find phase              │
+              └──────────┬───────────────┘
+                         │
+                         └──────→ (Next Task)
 ```
+
+### Key Points
+
+1. **Gates are mandatory** — Don't skip verification
+2. **Phases are sequential** — Don't parallelize Find and Implement
+3. **Compound closes the loop** — Knowledge feeds future work
+4. **Context resets between tasks** — Fresh start with handoff docs
 
 ## Phase 1: Find (Research)
 
@@ -90,7 +123,7 @@ Before coding:
 
 ### Intentional Compaction
 
-❌ **Don't use `/compact`** — It's automatic and loses important context.
+❌ **Don't rely on automatic context compaction** — it loses important context.
 
 ✅ **Do write explicit progress files:**
 
@@ -129,6 +162,21 @@ Add to MASTER_REFERENCE:
 - New learnings (numbered)
 - Updated decisions
 - New gotchas
+
+### Compound Checklist
+
+Answer each before closing your session:
+
+1. **New Rule?** Did this introduce a pattern we should always follow?
+   - If yes: Add to MASTER_REFERENCE
+2. **Non-Obvious Learning?** Did we discover something surprising?
+   - If yes: Add to MASTER_REFERENCE with context
+3. **Repeat Risk?** Would this mistake happen again without documentation?
+   - If yes: Add to MASTER_REFERENCE or anti-patterns
+4. **Architecture Impact?** Does this affect future design decisions?
+   - If yes: Log as decision with rationale
+5. **Security Implication?** Did we touch auth, permissions, or data access?
+   - If yes: Verify + document in security notes
 
 ## Thinking Depth Keywords
 

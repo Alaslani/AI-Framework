@@ -5,8 +5,6 @@ Real-world examples of AI-Framework in action.
 | Project Type | Description | Key Patterns |
 |--------------|-------------|--------------|
 | [Web App](web-app/) | Next.js SaaS application | Full FIC workflow, multi-portal |
-| [Mobile App](mobile-app/) | React Native app | Session handoffs, cross-platform |
-| [API Backend](api-backend/) | Node.js microservices | Database patterns, RLS |
 
 ## How to Use
 

@@ -58,7 +58,7 @@ Start new context window when you see:
 
 ### Intentional Compaction
 
-❌ Don't use automatic `/compact` — it loses important context
+❌ Don't rely on automatic context compaction — it loses important context
 
 ✅ Do write explicit progress files:
 - PROGRESS.md (during feature work)
@@ -81,7 +81,7 @@ If AI writes more code, specs become the thing you maintain.
 ## 1. Quick Task
 
 ```markdown
-@[agent] [Title]
+[Title]
 
 ## Task
 [One sentence description]
@@ -99,7 +99,7 @@ After: [desired behavior]
 ## 2. Research
 
 ```markdown
-@[agent] /research [name]
+/research [name]
 
 ## Questions
 1. [Question about current state]
@@ -140,7 +140,7 @@ User → LoginForm → /api/login → auth.ts:validateToken() → DB
 ## 3. Plan
 
 ```markdown
-@[agent] /plan [name]
+/plan [name]
 
 ## Context
 [Why this matters - 1-2 sentences]
@@ -169,7 +169,7 @@ Think hard about edge cases.
 ## 4. Implement
 
 ```markdown
-@[agent] /implement [name] --phase [N]
+/implement [name] --phase [N]
 
 ## Plan Reference
 `plans/[name].md`
@@ -190,7 +190,7 @@ After implementation:
 ## 5. Bug Report
 
 ```markdown
-@[agent] /bug [title]
+/bug [title]
 
 ## Observed
 [What happened]
@@ -214,7 +214,7 @@ After implementation:
 ## 6. Compound (Capture Learning)
 
 ```markdown
-@[agent] /compound
+/compound
 
 ## Session Summary
 [What was accomplished]
@@ -231,18 +231,24 @@ Add to Master Reference learning #[next number]
 
 ---
 
-## 7. Agent Selection
+## 7. Task Focus
+
+Match your task type to the right focus area:
 
 ```
-API/Database work    → Backend specialist
-UI/Components        → Frontend specialist
-Tests                → QA specialist
-Research/Docs        → Research specialist
-Infrastructure       → DevOps specialist
+API/Database work    → Focus: Backend
+UI/Components        → Focus: Frontend
+Tests                → Focus: QA
+Research/Docs        → Focus: Research
+Infrastructure       → Focus: DevOps
 Not sure?            → Start with /research
 ```
 
-**Subagent Purpose**: Context control, NOT role-play. Use subagents to offload search/find tasks so the parent agent stays focused. See [Subagent Usage](../docs/patterns/subagent-usage.md).
+When stating your task, mention the focus area for better results:
+"I need to work on the backend — /research payment-flow"
+
+> **Claude Code users**: You can spawn subagents for each focus area.
+> See [Subagent Usage](../docs/patterns/subagent-usage.md).
 
 ---
 
@@ -294,10 +300,10 @@ Concrete proof over assertions. The AI runs both versions and compares output.
 | "Fix the bug" | "Error X in file Y, expected Z" |
 | Start with /implement | Start with /research |
 | Long prompts | Short prompt + one example |
-| Use /compact | Write explicit progress files |
+| Rely on automatic compaction | Write explicit progress files |
 | Keep going when context > 60% | Compact and start fresh |
 | Review code line-by-line | Review research and plans |
-| Have AI "roleplay" personas | Use subagents for context offload |
+| Have AI "roleplay" personas | Use task-focused prompts instead |
 
 ---
 
@@ -338,5 +344,5 @@ After EVERY implementation:
 
 ---
 
-*Version: 1.2*
+*Version: 2.0*
 *Added: Section 8 (Prompt Escalation Patterns)*

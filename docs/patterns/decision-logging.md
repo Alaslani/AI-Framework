@@ -80,4 +80,4 @@ Reference in Transfer Packs: "New learning: see #47 in Master Reference"
 
 ---
 
-*Next: [AI Memory System](../memory/ai-memory-system.md)*
+*Next: [Memory Setup](../memory-setup.md)*

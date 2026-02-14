@@ -6,6 +6,49 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.0.0] - 2026-02-14
+
+### Added
+
+- `CLAUDE.md` — Auto-read by Claude Code, routes agent to correct files
+- `PROJECT_INSTRUCTIONS.md` — Ready-to-paste template for Claude AI Projects
+- `docs/integrations/claude-ai.md` — Dedicated Claude AI guide
+  (Projects, Memory, session workflow, artifacts, Claude AI + Code combo)
+- Subagent usage doc now has Claude Code header note
+
+### Changed
+
+- BREAKING: Core methodology is now tool-agnostic
+  (Claude-specific features live in integration guides only)
+- `@[agent]` syntax removed from all prompt templates — commands are universal
+- "Agent Selection" renamed to "Task Focus" — mental model, not a feature
+- Subagent pattern moved from core methodology to Claude Code integration
+- Recovery pattern is universal — tool-specific variants in integration guides
+- Parallel development (worktrees) moved from core to Claude Code integration
+- Memory docs consolidated into single `docs/memory-setup.md`
+
+### Removed
+
+- `GOLDEN_PATH.md` (consolidated into README and methodology)
+- `FRAMEWORK_CONTRACT.md` (rules integrated into methodology docs)
+- `docs/fic-loop.md` (ASCII diagram merged into fic-workflow.md)
+- `docs/compound-checklist.md` (merged into fic-workflow.md Compound section)
+- `docs/exit-test.md` (merged into anti-patterns.md as "When NOT to Use")
+- `docs/integrations/prompt-templates.md` (duplicate of templates/)
+- `docs/memory/cross-project-learning.md` (generic advice)
+- `docs/memory/ai-memory-system.md` (merged into memory-setup.md)
+- `docs/patterns/parallel-development.md` (moved to claude-code.md)
+- `examples/mobile-app/` and `examples/api-backend/` (one example sufficient)
+
+### Improved
+
+- ~45% content reduction, zero duplicate explanations
+- Each concept explained in exactly one place
+- Claude AI and Claude Code users each have a dedicated guide
+- New projects get instant setup via CLAUDE.md or PROJECT_INSTRUCTIONS.md
+
+---
+
 ## [1.6.0] - 2026-02-12
 
 ### Added

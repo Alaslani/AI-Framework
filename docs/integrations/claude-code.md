@@ -175,6 +175,59 @@ Shows: context % used, current branch, model. Helps you catch the 60% threshold 
 
 ---
 
+## Parallel Development with Git Worktrees
+
+One git worktree = one working directory = one Claude Code session. No branch switching, no stashing, no conflicts.
+
+### Setup
+
+```bash
+# Create worktrees from your repo root
+git worktree add ../project-feat origin/main
+git worktree add ../project-fix origin/main
+```
+
+### The Pattern
+
+```
+Terminal 1 (main)          Terminal 2 (feat)          Terminal 3 (fix)
+┌──────────────┐          ┌──────────────┐          ┌──────────────┐
+│ Claude Code  │          │ Claude Code  │          │ Claude Code  │
+│ main branch  │          │ feat/dark-   │          │ fix/rtl-     │
+│ tests + QA   │          │ mode         │          │ header       │
+└──────────────┘          └──────────────┘          └──────────────┘
+       │                         │                         │
+       └─────────────────────────┼─────────────────────────┘
+                                 │
+                           Same .git repo
+                           Shared history
+```
+
+### Rules
+
+| Rule | Why |
+|------|-----|
+| One Claude Code instance per worktree | Isolated context = better output |
+| Only parallelize independent work | Dependent tasks create merge conflicts |
+| Merge back to main frequently | Avoid drift between worktrees |
+| Clean up finished worktrees | `git worktree remove ../project-feat` |
+
+### When to Parallelize
+
+**Good candidates**: Feature A + Bug fix B (different files), Backend + Frontend (different domains), Tests + Docs (no code overlap).
+
+**Don't parallelize**: Two features touching same files, tasks with data dependencies, database migrations.
+
+### Cleanup
+
+```bash
+git worktree list              # List active worktrees
+git worktree remove ../feat    # Remove finished worktree
+git worktree prune             # Prune stale references
+```
+
+---
+
 ## Context Management
 
 | Signal | Action |
