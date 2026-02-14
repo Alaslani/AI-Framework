@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/version-2.0.0-blue" alt="Version"></a>
+  <a href="https://github.com/Alaslani/AI-Framework/releases/tag/v2.0.0"><img src="https://img.shields.io/badge/version-2.0.0-blue" alt="Version"></a>
   <a href="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="Lint"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
