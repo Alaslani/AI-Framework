@@ -130,6 +130,53 @@ When exceeding 40%:
 
 ---
 
+## 9. Implementing Against a Black Box Without Learning Tests
+
+**Wrong**: Reading API docs and immediately writing an implementation plan.
+
+**Right**: Run `/learn` first. Write tests that prove the API actually behaves
+as documented.
+
+| Step | Without /learn | With /learn |
+|------|---------------|-------------|
+| Plan | Based on docs (assumptions) | Based on proven behavior |
+| Implementation | Discover surprises mid-code | Surprises caught before planning |
+| Rework | Rewrite plan AND code | None — plan was correct |
+
+See [Learning Tests](methodology/learning-tests.md).
+
+---
+
+## 10. Trusting LLM Self-Review as Verification
+
+**Wrong**: Asking the AI "does this look correct?" and shipping when it says yes.
+
+**Right**: Use deterministic checks. Type checkers don't change their answer
+based on how you phrase the question.
+
+| Ask | LLM Response |
+|-----|-------------|
+| "Is this code good?" | "Yes, well-structured." |
+| "What's wrong with this?" | Lists 10 problems. |
+
+Same model, same code, different steering. Use `tsc`, `pytest`, `cargo check`
+instead.
+
+See [Back Pressure Engineering](methodology/back-pressure.md).
+
+---
+
+## 11. Designing Back Pressure After Implementation
+
+**Wrong**: Writing all the code first, then figuring out how to test it.
+
+**Right**: Decide what CLI commands prove each phase works BEFORE writing code.
+
+The harness is more important than the implementation. If you can't describe
+how to verify a phase, you don't understand the phase well enough to build it.
+
+---
+
 ## The Test
 
 Ask yourself:

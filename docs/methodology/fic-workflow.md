@@ -58,6 +58,24 @@ The core workflow for AI-assisted development.
 3. **Compound closes the loop** — Knowledge feeds future work
 4. **Context resets between tasks** — Fresh start with handoff docs
 
+### Adding /learn for External Integrations
+
+When implementing against external systems (third-party APIs, SDKs, government
+services), add a Learn phase between Find and Implement:
+
+```
+Find → Learn (if external) → Implement → Compound
+```
+
+The Learn phase runs [learning tests](learning-tests.md) to verify assumptions
+about black-box systems before planning the implementation.
+
+**Decision**: "Can I read the source code of the system I'm integrating with?"
+- Yes → Skip Learn, go to Implement
+- No → Run /learn first
+
+See [Learning Tests](learning-tests.md) for details.
+
 ## Phase 1: Find (Research)
 
 ### Purpose
@@ -119,6 +137,7 @@ Before coding:
 - One phase at a time
 - Keep context under 40% (heuristic, not law — large audits may need 60%+, use explicit PROGRESS.md files)
 - Verify after each phase
+- Specify back pressure per phase (see [Back Pressure](back-pressure.md))
 - Write progress manually (see below)
 
 ### Intentional Compaction
@@ -147,6 +166,9 @@ After each phase:
 3. Build
 4. Test (manual or automated)
 ```
+
+> See [Back Pressure Engineering](back-pressure.md) for the full deterministic
+> feedback pyramid and how to audit your project's verification layers.
 
 ## Phase 3: Compound
 

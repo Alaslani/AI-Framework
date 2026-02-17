@@ -10,6 +10,7 @@
 |---------|----------|----------|--------|
 | `/quick-task` | <50 lines, single file | — | Direct fix |
 | `/research` | Need to understand first | "think" | research/[name].md |
+| `/learn` | External system integration | "think" | docs/[name]/LEARNING_TESTS.md |
 | `/plan` | Multi-file, complex logic | "think hard" | plans/[name].md |
 | `/implement` | Executing approved plan | — | Code changes |
 | `/bug` | Report bug during work | — | Bug entry |
@@ -137,6 +138,38 @@ User → LoginForm → /api/login → auth.ts:validateToken() → DB
 
 ---
 
+## 2.5. Learn (External Integrations)
+
+```markdown
+/learn [integration-name]
+
+## External System
+[SDK/API name + version]
+
+## Documentation
+[Link to docs]
+
+## Assumptions to Verify
+1. [What we think happens when X]
+2. [Expected response shape for Y]
+3. [Edge case: timeout/error/invalid input]
+
+## Output
+Create `docs/[name]/LEARNING_TESTS.md` with:
+- Runnable test code
+- Expected vs actual behavior
+- Key findings (updated after running)
+
+Think through edge cases systematically.
+```
+
+**When to use**: Before `/plan` when integrating with any system you can't
+read the source of. See [Learning Tests](../docs/methodology/learning-tests.md).
+
+**Critical rule**: Don't proceed to `/plan` if any assumption is ❌.
+
+---
+
 ## 3. Plan
 
 ```markdown
@@ -154,6 +187,12 @@ User → LoginForm → /api/login → auth.ts:validateToken() → DB
 - Must not break: [existing feature]
 - Max phases: [3-5]
 - Timeline: [deadline if any]
+
+## Back Pressure
+For each phase, specify:
+- What CLI commands prove it works
+- What to manually verify
+- Any learning test dependencies
 
 ## Output
 Create `plans/[name].md` with:
@@ -304,6 +343,9 @@ Concrete proof over assertions. The AI runs both versions and compares output.
 | Keep going when context > 60% | Compact and start fresh |
 | Review code line-by-line | Review research and plans |
 | Have AI "roleplay" personas | Use task-focused prompts instead |
+| Implement against black-box without /learn | Prove assumptions with /learn first |
+| Trust LLM self-review as verification | Use deterministic checks (type-check, build, tests) |
+| Design back pressure after implementation | Design back pressure BEFORE writing code |
 
 ---
 
@@ -342,7 +384,13 @@ After EVERY implementation:
 - **Key insight**: Progress = reduced uncertainty, not throughput
 - **Flow**: Spec → Build → Deploy → Signal → Learn
 
+### Learning Tests & Back Pressure
+- **Source**: Michael Feathers, "Working Effectively with Legacy Code" (concept origin)
+- **Podcast**: AI That Works — "Learning Tests" episode (Dexter Horthy & Vaibhav/BAML)
+- **Key insight**: Prove external system behavior before planning, not during implementation
+- **Back Pressure**: Deterministic feedback loops > LLM self-review
+
 ---
 
-*Version: 2.0*
-*Added: Section 8 (Prompt Escalation Patterns)*
+*Version: 2.1*
+*Added: Section 2.5 (Learning Tests), Back Pressure in plans, new anti-patterns*

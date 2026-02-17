@@ -34,7 +34,7 @@ AI assistants have context limits. Keep context under 40% for better reasoning. 
 Every session should make the next one better. Capture learnings, update your knowledge base, build institutional memory.
 
 ### 6. Verification at Every Gate
-Trust but verify. Type check, lint, build, and test after every implementation phase.
+Trust but verify. Type check, lint, build, and test after every implementation phase. Prefer deterministic verification (type checkers, compilers, tests) over probabilistic review (LLM self-checks). See [Back Pressure Engineering](methodology/back-pressure.md).
 
 ## Why AI Development Breaks
 

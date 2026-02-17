@@ -44,6 +44,20 @@ Before approving code:
 
 ## Gate Types
 
+### Learning Gate (Before Planning External Integrations)
+
+**Question:** "Do I know how this external system actually behaves?"
+
+**Checklist:**
+- [ ] I've run learning tests against the actual API/SDK
+- [ ] Assumptions are marked ✅, ❌, or ⚠️
+- [ ] No ❌ assumptions remain unresolved
+- [ ] Key findings are documented
+
+**When to skip:** You own the system or it's well-documented and deterministic.
+
+See [Learning Tests](learning-tests.md) for the full /learn workflow.
+
 ### Understanding Gate (After Research)
 
 **Question:** "Is my understanding correct?"
@@ -84,6 +98,15 @@ npm run build  # or equivalent
 # 4. Test
 npm run test  # or manual verification
 ```
+
+### Back Pressure Requirement
+
+Each phase should declare its back pressure upfront — the specific commands
+that prove the phase works. See [Back Pressure Engineering](back-pressure.md)
+for the full pyramid.
+
+Weak: "Verify it works"
+Strong: "`npm run type-check && npm run build && npm run test`"
 
 ### Completion Gate (Before Deployment)
 
