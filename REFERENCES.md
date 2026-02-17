@@ -21,6 +21,15 @@
 - **Flow**: Spec (intent, assumptions) → Build (AI-collapsed) → Deploy → Signal (evidence) → Learn
 - **Why it matters**: When execution cost collapses, clarity becomes the bottleneck. The work shifts from building to learning.
 
+### Learning Tests & Back Pressure Engineering
+- **Source**: Michael Feathers, "Working Effectively with Legacy Code" — Learning test concept
+- **Podcast**: AI That Works — "Learning Tests" episode
+- **Hosts**: Dexter Horthy (Riptide) & Vaibhav (Boundary/BAML)
+- **Key insight**: Prove external system behavior before planning, not during implementation. The formal version of what every developer does when they `curl` an API for the first time.
+- **Back Pressure**: Jeff Huntley — Deterministic feedback loop diagram for AI coding agents
+- **Core principle**: "You can accidentally steer a model. You cannot accidentally steer a type checker."
+- **Adapted into**: `docs/methodology/learning-tests.md`, `docs/methodology/back-pressure.md`
+
 ### Claude Code Best Practices
 - **Source**: "10 Tips for Claude Code" thread
 - **Author**: Boris Cherny (@bcherny), Anthropic Claude Code team

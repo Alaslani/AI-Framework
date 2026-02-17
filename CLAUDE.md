@@ -23,6 +23,8 @@ and knowledge preservation.
 - **40% Rule**: Keep context under 40% for best reasoning
 - **Verification**: Type check → Lint → Build → Test after every phase
 - **Signal over Status**: Capture what you learned, not just what you did
+- **Learning Tests**: Prove external system behavior before planning (/learn command)
+- **Back Pressure**: Deterministic feedback loops — type-check > build > test > LLM review
 
 ## When Someone Says "Set up AI-Framework for my project"
 

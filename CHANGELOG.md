@@ -6,6 +6,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.1.0] - 2026-02-17
+
+### Added
+- `docs/methodology/learning-tests.md` — `/learn` command for proving external system behavior before planning
+- `docs/methodology/back-pressure.md` — Deterministic feedback loops for AI coding agents (pyramid model)
+- `/learn` step integrated into FIC workflow between Find and Implement
+- Learning Gate added to validation gates (pre-planning check for external integrations)
+- Back pressure specification required for every `/implement` phase
+- `templates/LEARNING_TESTS.md` — Template for documenting learning test results
+- Three new anti-patterns: black-box without /learn, LLM self-review as verification, back pressure after code
+
+### Changed
+- FIC workflow: Find → Learn (if external) → Implement → Compound
+- Validation gates: back pressure requirement per phase, learning gate for external integrations
+- `templates/PROMPT_TEMPLATES.md`: `/learn` command, back pressure in plans (v2.0 → v2.1)
+- README: two new "bulletproof" criteria, updated TOC
+
+### Attribution
+- Michael Feathers, "Working Effectively with Legacy Code" — learning test concept origin
+- AI That Works podcast — "Learning Tests" episode (Dexter Horthy & Vaibhav/BAML)
+- Jeff Huntley — deterministic feedback loop diagram
+
+---
+
 ## [2.0.0] - 2026-02-14
 
 ### Added
