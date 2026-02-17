@@ -122,6 +122,33 @@ Use this template to inventory what feedback loops your project has:
 Gaps in this table are opportunities, not failures. Fill them over time,
 starting from the top of the pyramid.
 
+### Visual Architecture Diagrams
+
+Auto-generated dependency diagrams are an underused form of deterministic back pressure. When an AI agent accidentally introduces a cross-boundary import or creates a circular dependency, a diagram generated from the actual codebase makes the violation immediately visible.
+
+**Why this works as back pressure:**
+
+- The diagram is generated from code, not from LLM judgment — it can't be steered
+- Structural violations that are invisible in diffs become obvious in visual form
+- The agent can compare before/after diagrams to verify its changes didn't break architecture boundaries
+
+**When to invest in this:**
+
+| Signal | Action |
+|--------|--------|
+| Monorepo with multiple packages or modules | Generate cross-package dependency graph |
+| Strict layering (e.g., UI → API → DB) | Visualize layer violations |
+| Agent keeps introducing circular imports | Add diagram generation to phase verification |
+| Code review repeatedly catches architecture drift | Automate what reviewers are checking visually |
+
+**Implementation approaches:**
+
+- Language-native tools: `madge` (JS/TS), `pydeps` (Python), `cargo-depgraph` (Rust), `go mod graph` (Go)
+- Generic: `dependency-cruiser` for JS/TS with rule-based violation detection
+- Custom: parse imports and generate Mermaid/Graphviz diagrams in CI
+
+The key insight is that dependency diagrams sit between "Integration Tests" and "Visual/Manual" on the back pressure pyramid — they're more deterministic than screenshots but less deterministic than unit tests. They catch a class of errors (structural/architectural violations) that no other layer in the pyramid reliably catches.
+
 ---
 
 *Next: [PACK System](pack-system.md)*

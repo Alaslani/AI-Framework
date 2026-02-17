@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.1.1] - 2026-02-17
+
+### Added
+- **Visual Architecture Diagrams** as back pressure technique in `docs/methodology/back-pressure.md`
+- Implementation approaches for JS/TS, Python, Rust, and Go dependency visualization
+- Decision table for when to invest in architecture diagram generation
+
+### Attribution
+- Boundary/BAML team's CargoStow tool concept (AI That Works podcast)
+
+---
+
 ## [2.1.0] - 2026-02-17
 
 ### Added
