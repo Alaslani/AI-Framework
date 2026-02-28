@@ -1,4 +1,4 @@
-# Prompt Templates v1.1
+# Prompt Templates v2.2
 
 > Clear prompts beat complex prompts. Tell the AI what TO do.
 
@@ -6,17 +6,16 @@
 
 ## Quick Reference
 
-| Command | Use When | Thinking | Output |
-|---------|----------|----------|--------|
-| `/quick-task` | <50 lines, single file | — | Direct fix |
-| `/research` | Need to understand first | "think" | research/[name].md |
-| `/learn` | External system integration | "think" | docs/[name]/LEARNING_TESTS.md |
-| `/plan` | Multi-file, complex logic | "think hard" | plans/[name].md |
-| `/implement` | Executing approved plan | — | Code changes |
-| `/bug` | Report bug during work | — | Bug entry |
-| `/compound` | Capture learnings | — | Knowledge update |
-
-**Thinking Keywords**: `think` → `think hard` → `think harder` → `ultrathink`
+| Command | Use When | Output |
+|---------|----------|--------|
+| `/quick-task` | <50 lines, single file | Direct fix |
+| `/research` | Need to understand first | research/[name].md |
+| `/learn` | External system integration | docs/[name]/LEARNING_TESTS.md |
+| `/plan` | Multi-file, complex logic | plans/[name].md |
+| `/implement` | Executing approved plan | Code changes |
+| `/bug` | Report bug during work | Bug entry |
+| `/session-end` | End of session — capture + improve | Knowledge update + CLAUDE.md |
+| `/auto` | Autonomous batch work — slot machine | Checkpoint → work → accept/revert |
 
 ---
 
@@ -250,10 +249,10 @@ After implementation:
 
 ---
 
-## 6. Compound (Capture Learning)
+## 6. Session End
 
 ```markdown
-/compound
+/session-end
 
 ## Session Summary
 [What was accomplished]
@@ -264,9 +263,56 @@ After implementation:
 **Correct approach**: [What works]
 **Why**: [Underlying reason]
 
+## CLAUDE.md Update
+If you corrected the AI during this session, add the correction to CLAUDE.md:
+- What the model got wrong
+- What the correct behavior is
+- Why (so the model understands, not just obeys)
+
 ## Update
 Add to Master Reference learning #[next number]
+
+## Blockers
+[What's preventing the next step, if anything]
+
+## Transfer Pack
+[Generate handoff for next session]
 ```
+
+**Key improvement over /compound**: Session-end also captures CLAUDE.md updates — if the model made a mistake you corrected, add it so the same mistake doesn't recur. This creates a continuous improvement loop where every session makes the project smarter.
+
+---
+
+## 6.5. Autonomous Mode (Slot Machine)
+
+```markdown
+/auto [task-description]
+
+## Checkpoint
+Save current state before autonomous work.
+
+## Task
+[What the AI should do autonomously]
+
+## Self-Verification
+Every 5-10 files, run:
+1. Type check
+2. Lint
+3. Build
+4. Tests (if applicable)
+
+## Accept/Revert
+Binary decision: accept all changes or revert to checkpoint.
+```
+
+Don't wrestle with broken output — revert and re-prompt with clearer instructions.
+
+| Good for | Never for |
+|----------|-----------|
+| Tests and test generation | Business logic |
+| Code cleanup and formatting | Security-critical code |
+| Refactoring (well-tested code) | Database migrations |
+| Multi-file repetitive changes | Financial calculations |
 
 ---
 
@@ -325,10 +371,23 @@ After implementation:
 
 Concrete proof over assertions. The AI runs both versions and compares output.
 
+### Parallel Exploration
+
+When both paths seem viable and you need data to decide:
+
+```
+"Implement approach A in one branch and approach B in another.
+Compare: performance, code complexity, and maintainability."
+```
+
+Use git worktrees to run both approaches simultaneously. Let concrete results pick the winner.
+
 **When to use which**:
 - First pass feels hacky → Elegant Solution
 - About to ship → Grill
 - Need confidence → Prove It Works
+- Architectural fork → Parallel Exploration
+- Peripheral task, don't want to supervise → Slot Machine
 
 ---
 
@@ -346,6 +405,10 @@ Concrete proof over assertions. The AI runs both versions and compares output.
 | Implement against black-box without /learn | Prove assumptions with /learn first |
 | Trust LLM self-review as verification | Use deterministic checks (type-check, build, tests) |
 | Design back pressure after implementation | Design back pressure BEFORE writing code |
+| Stuff everything into CLAUDE.md | Keep CLAUDE.md lean, use progressive disclosure |
+| Never audit your tools | Audit commands/agents every 20-30 sessions |
+| Use rigid "always" language | Scope instructions with "when [context]" or "prefer" |
+| Wrestle with broken AI output | Revert and re-prompt (slot machine principle) |
 
 ---
 
@@ -392,5 +455,5 @@ After EVERY implementation:
 
 ---
 
-*Version: 2.1*
-*Added: Section 2.5 (Learning Tests), Back Pressure in plans, new anti-patterns*
+*Version: 2.2*
+*Added: Session End, Autonomous Mode, Parallel Exploration, progressive disclosure and tool audit patterns*

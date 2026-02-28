@@ -38,13 +38,22 @@
 - **Key patterns**: Parallel worktrees, plan-then-review, CLAUDE.md investment, prompt escalation, /rewind, subagent spawning, permission hooks
 - **Adapted into**: `docs/integrations/claude-code.md` (includes parallel development patterns)
 
+### Agent Tool Design
+- **Source**: "Lessons from Building Claude Code: Seeing like an Agent"
+- **Author**: Thariq (@trq212), Anthropic Claude Code team
+- **Date**: February 27, 2026
+- **Platform**: X (Twitter)
+- **Key patterns**: Tool count as cognitive load, progressive disclosure over system prompt bloat, subagent pattern for knowledge loading, periodic tool audit, constraining language detection (TodoWrite → Tasks migration)
+- **Core insight**: Design tools shaped to the model's abilities. As models improve, old tools can become constraining rather than helpful. Revisit previous assumptions constantly.
+- **Adapted into**: `docs/integrations/claude-code.md` (progressive disclosure, tool audit, constraining language), `docs/anti-patterns.md` (3 new anti-patterns)
+
 ## Real-World Implementation
 
 ### SahmX
 - **What**: Saudi Arabian real estate tokenization platform
-- **Scale**: 3 production portals, 60+ day sprint to launch
+- **Scale**: 3 production portals, 90-day sprint to launch
 - **Repo**: Private (methodology extracted into this framework)
-- **Validation**: 340+ learnings captured, 50+ sessions managed
+- **Validation**: 558+ learnings captured, 88+ sessions managed
 
 ### Integration Guides
 

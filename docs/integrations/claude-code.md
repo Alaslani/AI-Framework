@@ -2,7 +2,7 @@
 
 Claude Code is a terminal-based AI coding agent. This guide covers patterns that maximize its effectiveness with AI-Framework.
 
-> Based on practices from the Anthropic Claude Code team (Boris Cherny, Feb 2026).
+> Based on practices from the Anthropic Claude Code team (Boris Cherny, Feb 2026; Thariq, Feb 2026).
 
 ---
 
@@ -95,6 +95,132 @@ If you do something more than once a day, it should be a skill or custom command
 
 Skills are reusable across projects. Commands are project-specific.
 
+### Tool Count Matters
+
+The Claude Code team maintains ~20 tools total. Every additional command or agent is one more option the model must evaluate before acting — cognitive load, not capability.
+
+**Guideline**: If your project has more than ~20 total commands + agents, you likely have overlap. Audit for:
+
+- Commands that run the same underlying checks
+- Agents that cover the same domain
+- Skills that duplicate CLAUDE.md content
+
+Fewer, well-designed tools outperform many overlapping ones.
+
+---
+
+## Progressive Disclosure
+
+**Problem**: CLAUDE.md is loaded every conversation. If it contains detailed patterns, examples, and reference tables, that's a token tax on every session — even when the content is irrelevant to the task at hand.
+
+**Solution**: Keep CLAUDE.md lean (~200-400 lines). Move detailed content to skill files. Replace verbose sections with 1-2 line pointers.
+
+```markdown
+# In CLAUDE.md (always loaded)
+## Database → See .claude/skills/database/ for query patterns, migration templates
+
+# In .claude/skills/database/SKILL.md (loaded on demand)
+[Full query patterns, RLS examples, migration templates — 400+ lines]
+```
+
+### Progressive Disclosure Hierarchy
+
+```
+CLAUDE.md → skills → docs → external docs
+```
+
+Each layer references the next. The model reads recursively to build exactly the context it needs — no more, no less.
+
+### What Goes Where
+
+| Keep in CLAUDE.md | Move to skill files |
+|-------------------|---------------------|
+| Tech stack and versions | Code patterns and examples |
+| Git conventions | Reference tables |
+| Verification commands | Testing templates and fixtures |
+| File structure overview | Design system details |
+| Key architectural decisions | Compliance and security checklists |
+
+### Rule of Thumb
+
+If a section is only relevant to 1 in 5 sessions, it belongs in a skill file, not CLAUDE.md.
+
+This is the same pattern Claude Code uses internally — skill files reference other files, the model discovers context by following pointers recursively.
+
+---
+
+## Periodic Tool Audit
+
+Run every 20-30 sessions. Audit your commands, agents, skills, and CLAUDE.md token count.
+
+### Overlap Signals
+
+| Signal | Action |
+|--------|--------|
+| Two commands run the same verification checks | Merge (one command, add flags) |
+| Multiple agents cover the same domain | Consolidate into one |
+| Skill duplicates a CLAUDE.md section | Extract from CLAUDE.md, keep skill |
+| Command unused for a month | Remove — the model can improvise |
+| Commands and agents don't reference each other | Connect or consolidate |
+
+### Orthogonal vs Overlapping
+
+This is the critical distinction. Only merge things that genuinely overlap.
+
+| Relationship | Example | Action |
+|-------------|---------|--------|
+| Overlapping | `/verify` and `/deploy` run identical checks | Merge: `/deploy --dry-run` |
+| Subset | `/bundle-analyze` is part of `/perf-audit` | Absorb into parent |
+| Orthogonal | Accessibility audit vs visual polish | Keep separate |
+
+Merging orthogonal concerns into one bloated command is **worse** than two focused ones. Accessibility (WCAG compliance) and visual polish are different skills — combining them dilutes both.
+
+### Constraining Language Audit
+
+Review your CLAUDE.md and skill files for language that limits model adaptation.
+
+| Pattern | Risk | Fix |
+|---------|------|-----|
+| "Always follow X workflow" | Forces overhead on trivial tasks | "For non-trivial features, prefer X" |
+| "ALWAYS do Y" | Over-applied to irrelevant contexts | Scope: "When doing Z, always Y" |
+| System reminders every N turns | Model sticks rigidly to lists | Remove if model handles natively |
+| Extended thinking keywords | Cargo cult | Remove or make optional |
+
+The Claude Code team learned this when TodoWrite reminders every 5 turns made Claude stick rigidly to the todo list instead of adapting. They replaced TodoWrite with Tasks — and removed the system reminders. When models get smarter, old tools and rigid instructions can constrain rather than help. Revisit your assumptions.
+
+---
+
+## Slot Machine Pattern (Autonomous Mode)
+
+Checkpoint → autonomous work (15-30 min) → binary accept/revert. Don't wrestle with broken output — revert and re-prompt.
+
+Source: Anthropic's RL Engineering and Data Science teams.
+
+| Good for | Never for |
+|----------|-----------|
+| Tests and test generation | Business logic |
+| Code cleanup and formatting | Security-critical code |
+| Refactoring (well-tested code) | Database migrations |
+| Multi-file repetitive changes | Financial calculations |
+
+The key insight: starting over with a better prompt beats wrestling with fixes. If the output isn't right, revert the checkpoint and try again with clearer instructions.
+
+---
+
+## Session End Protocol
+
+Before closing a session, run through these steps:
+
+1. **Summarize** — What was accomplished this session
+2. **Capture learnings** — What surprised you, what broke, what worked
+3. **Update CLAUDE.md** — If the model made a mistake you corrected, add it so the same mistake doesn't recur
+4. **Identify blockers** — What's preventing the next step
+5. **Generate Transfer Pack** — Handoff for the next session
+
+**Key**: The CLAUDE.md self-improvement loop. Mistakes discovered → add to CLAUDE.md → next session avoids them. This creates a continuous improvement cycle where every session makes the project smarter.
+
+Source: Anthropic's Data Infrastructure team.
+
 ---
 
 ## Subagent Patterns
@@ -160,6 +286,24 @@ After implementation:
 ```
 
 Claude runs both versions and compares output — concrete proof, not just assertions.
+
+### 4. Parallel Exploration
+
+When both paths seem viable and you need data to decide, not opinions:
+
+```
+"Implement approach A in one branch and approach B in another.
+Compare: performance, code complexity, and maintainability."
+```
+
+Use git worktrees to run both approaches simultaneously. Let concrete results pick the winner.
+
+**When to use which**:
+- First pass feels hacky → Elegant Solution
+- About to ship → Grill
+- Need confidence → Prove It Works
+- Architectural fork → Parallel Exploration
+- Peripheral task, don't want to supervise → Slot Machine
 
 ---
 

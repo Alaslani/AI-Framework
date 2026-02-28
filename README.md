@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Alaslani/AI-Framework/releases/tag/v2.1.1"><img src="https://img.shields.io/badge/version-2.1.1-blue" alt="Version"></a>
+  <a href="https://github.com/Alaslani/AI-Framework/releases/tag/v2.2.0"><img src="https://img.shields.io/badge/version-2.2.0-blue" alt="Version"></a>
   <a href="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="Lint"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
@@ -113,6 +113,7 @@ Confirm the user has:
 - **Verification at every gate** — Type check, lint, build, test
 - **Prove before you plan** — Learning tests verify external systems before you design around assumptions
 - **Deterministic over probabilistic** — Type checkers and compilers catch more than LLM self-review
+- **Tools shaped to model abilities** — Audit and consolidate your AI tooling as models improve; old tools can constrain rather than help
 
 <details>
 <summary><strong>Table of Contents</strong></summary>

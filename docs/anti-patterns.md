@@ -177,6 +177,57 @@ how to verify a phase, you don't understand the phase well enough to build it.
 
 ---
 
+## 12. System Prompt Bloat
+
+**Wrong**: Putting every pattern, example, and reference table in CLAUDE.md "because it might be useful."
+
+**Right**: Keep CLAUDE.md lean (~200-400 lines). Move detailed content to skill files loaded on demand.
+
+Every token in CLAUDE.md is a tax on every conversation — even when the content is irrelevant.
+
+| Keep in CLAUDE.md | Move to skill files |
+|-------------------|---------------------|
+| Tech stack, git conventions | Code patterns, examples |
+| Verification commands | Reference tables |
+| File structure overview | Testing templates |
+| Key decisions | Design system, compliance details |
+
+Reference: [Claude Code — Progressive Disclosure](integrations/claude-code.md#progressive-disclosure)
+
+---
+
+## 13. Tool Proliferation Without Audit
+
+**Wrong**: Adding a new command or agent for every workflow, never removing old ones.
+
+**Right**: Audit every 20-30 sessions. Merge overlapping, remove unused.
+
+| Signal | Action |
+|--------|--------|
+| Two commands run same checks | Merge into one with flags |
+| Multiple agents cover same domain | Consolidate into one |
+| Command unused for a month | Remove — the model can improvise |
+
+The Claude Code team maintains ~20 tools total. Every additional tool is cognitive load, not capability.
+
+---
+
+## 14. Constraining Language That Limits Model Adaptation
+
+**Wrong**: Rigid "ALWAYS do X" rules for every task regardless of complexity.
+
+**Right**: Scope instructions to context. Use "prefer" and "when [context]" instead of "always."
+
+| ❌ Constraining | ✅ Adaptive |
+|----------------|------------|
+| "Always follow X workflow" | "For non-trivial features, prefer X" |
+| "ALWAYS do Y" | "When doing Z, always Y" |
+| Thinking keywords on every prompt | Let the model decide when to think deeper |
+
+The Claude Code team learned this when TodoWrite reminders every 5 turns made Claude stick rigidly to the list instead of adapting. They replaced TodoWrite with Tasks — and removed the reminders. When models improve, old constraints can hurt rather than help.
+
+---
+
 ## The Test
 
 Ask yourself:
