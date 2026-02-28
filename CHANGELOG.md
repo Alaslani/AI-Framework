@@ -6,6 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.2.0] - 2026-02-28
+
+### Added
+- **Progressive Disclosure** pattern in `docs/integrations/claude-code.md` — keep CLAUDE.md lean, load details on demand via skill files
+- **Periodic Tool Audit** methodology in `docs/integrations/claude-code.md` — audit commands, agents, skills for overlap every 20-30 sessions
+- **Slot Machine** (autonomous mode) pattern in `docs/integrations/claude-code.md` — checkpoint → auto work → binary accept/revert
+- **Session End Protocol** in `docs/integrations/claude-code.md` — replaces /compound with CLAUDE.md self-improvement loop
+- **Parallel Exploration** as 4th prompt escalation pattern
+- 3 new anti-patterns: System Prompt Bloat (#12), Tool Proliferation Without Audit (#13), Constraining Language (#14)
+- `/auto` and `/session-end` commands in `templates/PROMPT_TEMPLATES.md`
+
+### Changed
+- `/compound` replaced by `/session-end` (includes compound + CLAUDE.md update)
+- Removed "Thinking Keywords" from prompt templates (models handle this natively — constraining language lesson)
+- `templates/PROMPT_TEMPLATES.md` version bumped to v2.2
+
+### Attribution
+- Thariq (@trq212), Anthropic Claude Code team — "Lessons from Building Claude Code: Seeing like an Agent" (Feb 27, 2026)
+- Anthropic internal teams (Data Science, RL Engineering, Data Infrastructure, Product Design) — workflow patterns
+
+---
+
 ## [2.1.1] - 2026-02-17
 
 ### Added
