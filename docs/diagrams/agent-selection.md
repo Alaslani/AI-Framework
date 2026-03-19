@@ -4,26 +4,17 @@ Decision tree for choosing the right approach when working with Claude Code.
 
 ```mermaid
 flowchart TD
-    START([New Task]) --> Q1{Quick task?\nSingle file, clear scope}
-
-    Q1 -->|Yes| DIRECT[Direct Execution\nJust do it inline]
-
-    Q1 -->|No| Q2{Need to understand\nthe codebase first?}
-
-    Q2 -->|Yes| EXPLORE[Explore First\nRead files, search code,\nmap dependencies]
-
-    Q2 -->|No| Q3{Multiple approaches?\nNeed architecture decisions?}
-
-    Q3 -->|Yes| PLAN[Plan First\nDesign approach, define phases,\nset verification per phase]
-
-    Q3 -->|No| Q4{Independent subtasks\nthat can run in parallel?}
-
-    Q4 -->|Yes| PARALLEL[Parallel Work\nSplit into independent agents,\neach with focused scope]
-
-    Q4 -->|No| SEQUENTIAL[Sequential Phases\nBreak into ordered phases,\nverify between each]
-
+    START([New Task]) --> Q1{Quick task?}
+    Q1 -->|Yes| DIRECT[Direct Execution]
+    Q1 -->|No| Q2{Need research?}
+    Q2 -->|Yes| EXPLORE[Explore First]
+    Q2 -->|No| Q3{Architecture decisions?}
     EXPLORE --> Q3
+    Q3 -->|Yes| PLAN[Plan First]
+    Q3 -->|No| Q4{Independent subtasks?}
     PLAN --> Q4
+    Q4 -->|Yes| PARALLEL[Parallel Work]
+    Q4 -->|No| SEQUENTIAL[Sequential Phases]
 
     style START fill:#4a9eff,color:#fff
     style DIRECT fill:#27ae60,color:#fff

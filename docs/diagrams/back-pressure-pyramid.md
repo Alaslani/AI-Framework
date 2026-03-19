@@ -4,13 +4,13 @@ The verification hierarchy from most deterministic (top) to least deterministic 
 
 ```mermaid
 flowchart TB
-    TC[Type Checker\ntsc, mypy, cargo check]
-    B[Build\nnext build, cargo build]
-    UT[Unit Tests\nvitest, pytest]
-    IT[Integration Tests\nE2E, API contracts]
-    LT[Learning Tests\nExternal system probes]
-    VM[Visual / Manual\nScreenshots, click-through]
-    LLM[LLM Review\n'Does this look right?']
+    TC[Type Checker]
+    B[Build]
+    UT[Unit Tests]
+    IT[Integration Tests]
+    LT[Learning Tests]
+    VM[Visual / Manual]
+    LLM[LLM Review]
 
     TC --> B --> UT --> IT --> LT --> VM --> LLM
 

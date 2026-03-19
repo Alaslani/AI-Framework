@@ -3,21 +3,16 @@
 How Claude Code hooks interact with tool execution during a session.
 
 ```mermaid
-flowchart LR
-    REQ([Claude wants\nto use a tool]) --> PRE{PreToolUse\nHook}
-
-    PRE -->|Exit 0\nAllowed| TOOL[Tool Executes\nWrite, Edit, Bash, etc.]
-    PRE -->|Exit non-zero\nBlocked| BLOCKED([Blocked\nClaude sees reason\nand adjusts])
-
-    TOOL --> POST[PostToolUse\nHook]
-    POST --> ADVISORY([Advisory Output\nClaude sees warnings\nbut continues])
-
-    ADVISORY --> MORE{More\nwork?}
+flowchart TD
+    REQ([Tool Request]) --> PRE{PreToolUse}
+    PRE -->|Exit 0| TOOL[Tool Executes]
+    PRE -->|Non-zero| BLOCKED([Blocked])
+    TOOL --> POST[PostToolUse]
+    POST --> MORE{More work?}
     MORE -->|Yes| REQ
-    MORE -->|No| STOP{Stop Hook\nSelf-Review}
-
-    STOP -->|Exit 0\nClean| DONE([Done\nSession complete])
-    STOP -->|Exit non-zero\nIssues found| FIX([Claude reviews\nfindings and fixes])
+    MORE -->|No| STOP{Stop Hook}
+    STOP -->|Exit 0| DONE([Done])
+    STOP -->|Non-zero| FIX([Fix Issues])
     FIX --> MORE
 
     style PRE fill:#e74c3c,color:#fff

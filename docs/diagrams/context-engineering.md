@@ -3,19 +3,18 @@
 How AI context budget is allocated across a session, and what triggers a fresh context.
 
 ```mermaid
-flowchart LR
-    subgraph Budget["Context Budget (100%)"]
-        direction TB
-        PC["Project Context\n(PACK docs, CLAUDE.md)\n~15%"]
-        CV["Conversation\n(messages, plans)\n~25%"]
-        TR["Tool Results\n(file reads, searches)\n~20%"]
-        RS["Reserved\n(reasoning space)\n~40%"]
+flowchart TD
+    subgraph Budget["Context Budget"]
+        PC["Project Context ~15%"]
+        CV["Conversation ~25%"]
+        TR["Tool Results ~20%"]
+        RS["Reserved ~40%"]
     end
 
-    Budget --> CHECK{Current\nUsage?}
-    CHECK -->|Under 40%| GOOD([Optimal\nBest reasoning quality])
-    CHECK -->|40-60%| WARN([Caution\nMonitor quality])
-    CHECK -->|Over 60%| RESET([Reset\nStart fresh context])
+    Budget --> CHECK{Usage Level?}
+    CHECK -->|Under 40%| GOOD([Optimal])
+    CHECK -->|40-60%| WARN([Caution])
+    CHECK -->|Over 60%| RESET([Reset])
 
     style PC fill:#4a9eff,color:#fff
     style CV fill:#9b59b6,color:#fff

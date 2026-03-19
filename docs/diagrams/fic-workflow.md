@@ -3,27 +3,20 @@
 The Find → Implement → Compound development loop with validation gates between each phase.
 
 ```mermaid
-flowchart LR
-    R[Research] --> UG{Understanding\nGate}
-    UG -->|Pass| EXT{External\nIntegration?}
+flowchart TD
+    R[Research] --> UG{Understanding Gate}
+    UG -->|Pass| P[Plan]
     UG -->|Fail| R
-
-    EXT -->|Yes| LT[Learning\nTests]
-    EXT -->|No| P[Plan]
-
-    LT --> LG{Learning\nGate}
-    LG -->|All ✅| P
-    LG -->|Any ❌| LT
-
-    P --> AG{Approach\nGate}
+    UG -->|External?| LT[Learning Tests]
+    LT -->|Proven| P
+    LT -->|Wrong| LT
+    P --> AG{Approach Gate}
     AG -->|Pass| I[Implement]
     AG -->|Fail| P
-
-    I --> IG{Implementation\nGate}
+    I --> IG{Implementation Gate}
     IG -->|Pass| C[Compound]
     IG -->|Fail| I
-
-    C --> DONE([Session End\nTransfer Pack])
+    C --> DONE([Transfer Pack])
 
     style R fill:#4a9eff,color:#fff
     style LT fill:#4a9eff,color:#fff

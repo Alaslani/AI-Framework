@@ -4,9 +4,9 @@ Automated quality enforcement layers, ordered from most deterministic (bottom) t
 
 ```mermaid
 flowchart TB
-    L3["Layer 3: Cross-Model Review\nDesign, architecture, blind spots"]
-    L2["Layer 2: Claude Code Hooks\nTaste, rationalization, domain rules"]
-    L1["Layer 1: ESLint Type-Checked Rules\nTypes, async, promises, any-leakage"]
+    L3["Cross-Model Review"]
+    L2["Claude Code Hooks"]
+    L1["ESLint Type-Checked Rules"]
 
     L3 --> L2 --> L1
 

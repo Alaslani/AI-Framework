@@ -3,18 +3,15 @@
 How implementing and reviewing models complement each other in the PR lifecycle.
 
 ```mermaid
-flowchart LR
-    DEV[Claude Code\nImplements] --> PR([PR Created])
-
-    PR --> AUTO[Auto Review\nTriggered on PR open]
-    AUTO --> AUTOFIX[Fix Blocking\nFindings]
-    AUTOFIX --> HUMAN{Human\nReview}
-
-    HUMAN -->|Small change\nBug fix, deps| MERGE([Merge])
-    HUMAN -->|Significant change\nFeature, architecture| MANUAL[Manual Deep\nReview]
-
-    MANUAL --> MANFIX[Fix Additional\nFindings]
-    MANFIX --> MERGE
+flowchart TD
+    DEV[Claude Code] --> PR([PR Created])
+    PR --> AUTO[Auto Review]
+    AUTO --> FIX1[Fix Findings]
+    FIX1 --> HUMAN{Human Review}
+    HUMAN -->|Small change| MERGE([Merge])
+    HUMAN -->|Significant| MANUAL[Manual Review]
+    MANUAL --> FIX2[Fix Findings]
+    FIX2 --> MERGE
 
     style DEV fill:#4a9eff,color:#fff
     style AUTO fill:#f5a623,color:#fff

@@ -4,19 +4,18 @@ The full lifecycle of an AI-assisted development session, from loading context t
 
 ```mermaid
 flowchart LR
-    START([Session Start]) --> LOAD[Load PACK\nMaster Reference\nTransfer Pack\nRoadmap]
-
+    START([Start]) --> LOAD[Load PACK]
     LOAD --> FIC
 
     subgraph FIC [FIC Loop]
         direction TB
-        F[Find\nResearch + Learn] --> I[Implement\nPlan + Execute + Verify]
-        I --> C[Compound\nCapture Learnings]
-        C -->|More work?| F
+        F[Find] --> I[Implement]
+        I --> C[Compound]
+        C -->|More work| F
     end
 
-    FIC --> END_SESSION[Session End\nUpdate PACK docs]
-    END_SESSION --> TP([Transfer Pack\nHandoff to next session])
+    FIC --> END_SESSION[Session End]
+    END_SESSION --> TP([Transfer Pack])
 
     style START fill:#4a9eff,color:#fff
     style LOAD fill:#4a9eff,color:#fff
