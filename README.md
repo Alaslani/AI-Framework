@@ -143,6 +143,7 @@ Confirm the user has:
 - **Guides**
   - [Anti-Patterns](docs/anti-patterns.md) — includes "When NOT to Use"
   - [Memory Setup](docs/memory-setup.md)
+  - [Claude Code Best Practices](docs/claude-code-best-practices.md) — Setup, hooks, agents, commands, and 30 gotchas
 - **Integrations**
   - [Claude AI](docs/integrations/claude-ai.md) — Projects, Memory, artifacts
   - [Claude Code](docs/integrations/claude-code.md) — Subagents, /rewind, CLAUDE.md, worktrees

@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `docs/methodology/evals-system.md` — 3-layer automated quality enforcement (ESLint type-checked rules → Claude Code hooks → cross-model review)
 - `docs/diagrams/` — 8 Mermaid diagrams for FIC workflow, evals pyramid, back pressure, context engineering, agent selection, session lifecycle, hook execution, and dual verification
 - Evals System and Diagrams added to README table of contents
+- `docs/claude-code-best-practices.md` — Comprehensive setup guide (hooks, agents, commands, testing, 30 gotchas)
 
 ### Attribution
 - Proven across two production codebases (50+ Claude Code sessions)
