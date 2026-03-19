@@ -139,6 +139,10 @@ When a gate fails:
 4. **Document** — Capture the learning
 5. **Proceed** — With corrected approach
 
+## Automating Gate Enforcement
+
+Gates are manual checkpoints. The [Evals System](evals-system.md) automates the mechanical parts — lint catches type errors before you review, hooks catch anti-patterns before you see the diff, and cross-model review catches design issues before you merge.
+
 ---
 
 *Next: [Session Handoff](../patterns/session-handoff.md)*

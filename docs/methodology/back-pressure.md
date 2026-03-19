@@ -149,6 +149,10 @@ Auto-generated dependency diagrams are an underused form of deterministic back p
 
 The key insight is that dependency diagrams sit between "Integration Tests" and "Visual/Manual" on the back pressure pyramid — they're more deterministic than screenshots but less deterministic than unit tests. They catch a class of errors (structural/architectural violations) that no other layer in the pyramid reliably catches.
 
+## Beyond Back Pressure: Automated Enforcement
+
+Back pressure tells you *what* to verify. The [Evals System](evals-system.md) tells you *how* to enforce it automatically — ESLint for deterministic checks, Claude Code hooks for taste violations, and cross-model review for architectural blind spots.
+
 ---
 
 *Next: [PACK System](pack-system.md)*

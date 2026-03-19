@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Alaslani/AI-Framework/releases/tag/v2.2.0"><img src="https://img.shields.io/badge/version-2.2.0-blue" alt="Version"></a>
+  <a href="https://github.com/Alaslani/AI-Framework/releases/tag/v2.3.0"><img src="https://img.shields.io/badge/version-2.3.0-blue" alt="Version"></a>
   <a href="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml"><img src="https://github.com/Alaslani/AI-Framework/actions/workflows/lint.yml/badge.svg" alt="Lint"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
   <a href=".github/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome"></a>
@@ -130,6 +130,9 @@ Confirm the user has:
   - [Validation Gates](docs/methodology/validation-gates.md)
   - [Learning Tests](docs/methodology/learning-tests.md)
   - [Back Pressure](docs/methodology/back-pressure.md)
+  - [Evals System](docs/methodology/evals-system.md)
+- **Diagrams**
+  - [All Diagrams](docs/diagrams/README.md) — Mermaid visual references
 - **Patterns**
   - [Session Handoff](docs/patterns/session-handoff.md)
   - [Project Knowledge](docs/patterns/project-knowledge.md)
