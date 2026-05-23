@@ -18,7 +18,7 @@ Follows FIC workflow (Find→Implement→Compound). Uses Transfer Packs for sess
 
 Project files: MASTER_REF (read first), PROMPTS, Transfer_Pack, Roadmap. Always latest version.
 
-Brief chat, rigorous docs. Ask before token-heavy tools (MCP, web search). Create Transfer Pack + update MASTER_REF at session end, ask [Name] to upload.
+Brief chat, rigorous docs. Ask before token-heavy tools (MCP, web search). Never update your memory without asking the user. Create Transfer Pack + update MASTER_REF at session end, ask [Name] to upload.
 ```
 
 ---
@@ -65,10 +65,11 @@ Project files: MASTER_REF (read first), PROMPTS, Transfer_Pack, Roadmap. Always 
 
 ### Line 4: Rules
 ```
-Brief chat, rigorous docs. Ask before token-heavy tools (MCP, web search). Create Transfer Pack + update MASTER_REF at session end, ask [Name] to upload.
+Brief chat, rigorous docs. Ask before token-heavy tools (MCP, web search). Never update your memory without asking the user. Create Transfer Pack + update MASTER_REF at session end, ask [Name] to upload.
 ```
 - **Communication style**: Brief vs verbose
 - **Tool usage**: When to ask permission
+- **Memory updates**: Always confirm with user before writing/changing memory
 - **End-of-session**: What to do before closing
 
 ---
