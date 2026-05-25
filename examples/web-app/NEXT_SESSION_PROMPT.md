@@ -5,7 +5,7 @@
 > Paste the **Session Start Prompt** below as the first message of the next session,
 > after uploading the updated PACK docs (MASTER_REFERENCE v1.4, ROADMAP v2.1,
 > TRANSFER_PACK v2.3).
-
+>
 > **Transfer Pack vs. Next Session Prompt** — the Transfer Pack describes where we left
 > off (cost anomaly backend complete). This is the executable kickoff: the message to
 > paste, the guardrails, and the one decision to settle before building the UI.

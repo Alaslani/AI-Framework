@@ -5,7 +5,7 @@
 > Paste the **Session Start Prompt** below as the first message of the next session,
 > after uploading the updated PACK docs ([MASTER_REFERENCE v[X.X], ROADMAP v[X.X],
 > TRANSFER_PACK v[X.X]]).
-
+>
 > **Transfer Pack vs. Next Session Prompt** — the Transfer Pack *describes* where you
 > left off (state). This doc is *executable*: the exact message to paste, the guardrails
 > to enforce, and the one decision that must be made before any work starts. Write it at
