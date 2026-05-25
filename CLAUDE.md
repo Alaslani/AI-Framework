@@ -14,12 +14,13 @@ and knowledge preservation.
 1. `templates/MASTER_REFERENCE.md` — project knowledge base template
 2. `templates/PROMPT_TEMPLATES.md` — commands and workflows
 3. `templates/TRANSFER_PACK.md` — session handoff format
-4. `templates/ROADMAP.md` — priority tracking format
+4. `templates/NEXT_SESSION_PROMPT.md` — executable next-session kickoff
+5. `templates/ROADMAP.md` — priority tracking format
 
 ## Core Concepts
 
 - **FIC**: Find → Implement → Compound (the workflow)
-- **PACK**: Project Artifacts for Context Knowledge (the 4 documents)
+- **PACK**: Project Artifacts for Context Knowledge (the 5 documents)
 - **40% Rule**: Keep context under 40% for best reasoning
 - **Verification**: Type check → Lint → Build → Test after every phase
 - **Signal over Status**: Capture what you learned, not just what you did

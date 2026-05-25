@@ -85,6 +85,15 @@ Examples:
 3. Verify current state
 4. Continue from next step
 
+## Pair It With a Next Session Prompt
+
+The Transfer Pack records *state*; it doesn't tell the next session what to do first.
+Write a **Next Session Prompt** alongside it — the exact message to paste, the one open
+question to resolve before any work, and the guardrails for the session. The Transfer
+Pack is the memory; the Next Session Prompt is the ignition.
+
+See: [templates/NEXT_SESSION_PROMPT.md](../../templates/NEXT_SESSION_PROMPT.md)
+
 ## Template
 
 See: [templates/TRANSFER_PACK.md](../../templates/TRANSFER_PACK.md)

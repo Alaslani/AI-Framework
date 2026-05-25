@@ -1,4 +1,4 @@
-# Prompt Templates v2.2
+# Prompt Templates v2.3
 
 > Clear prompts beat complex prompts. Tell the AI what TO do.
 
@@ -276,7 +276,12 @@ Add to Master Reference learning #[next number]
 [What's preventing the next step, if anything]
 
 ## Transfer Pack
-[Generate handoff for next session]
+[Generate handoff for next session — the state]
+
+## Next Session Prompt
+[Generate the kickoff for next session — the first message to paste,
+the open question to resolve before any work, and the guardrails.
+See templates/NEXT_SESSION_PROMPT.md]
 ```
 
 **Key improvement over /compound**: Session-end also captures CLAUDE.md updates — if the model made a mistake you corrected, add it so the same mistake doesn't recur. This creates a continuous improvement loop where every session makes the project smarter.
@@ -455,5 +460,5 @@ After EVERY implementation:
 
 ---
 
-*Version: 2.2*
-*Added: Session End, Autonomous Mode, Parallel Exploration, progressive disclosure and tool audit patterns*
+*Version: 2.3*
+*Added: Next Session Prompt generation to /session-end (5th PACK document)*

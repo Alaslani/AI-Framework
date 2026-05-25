@@ -8,6 +8,7 @@ Copy this entire folder to your project root to get started.
 |------|---------|
 | `MASTER_REFERENCE.md` | Project knowledge base — fill once, update always |
 | `TRANSFER_PACK.md` | Session handoff — create at end of each session |
+| `NEXT_SESSION_PROMPT.md` | Executable kickoff — the first message to paste next session |
 | `ROADMAP.md` | Priority queue and timeline |
 | `PROMPT_TEMPLATES.md` | AI prompt patterns for your workflow |
 

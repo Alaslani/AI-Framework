@@ -60,10 +60,11 @@ cp -r templates/ /path/to/your/project/
 
 ### Step 1: Copy Templates
 
-Copy all 4 files from `templates/` into the user's project root:
+Copy all 5 files from `templates/` into the user's project root:
 
 - `MASTER_REFERENCE.md`
 - `TRANSFER_PACK.md`
+- `NEXT_SESSION_PROMPT.md`
 - `ROADMAP.md`
 - `PROMPT_TEMPLATES.md`
 
@@ -159,13 +160,14 @@ Confirm the user has:
 
 ## The PACK System
 
-**P**roject **A**rtifacts for **C**ontext **K**nowledge — the 4 documents that preserve context across sessions:
+**P**roject **A**rtifacts for **C**ontext **K**nowledge — the 5 documents that preserve context across sessions:
 
 | Document | Purpose | Update Frequency |
 |----------|---------|------------------|
 | **MASTER_REFERENCE** | Permanent project knowledge (the brain) | After learnings |
 | **ROADMAP** | Direction and priorities (the plan) | Weekly or milestone |
 | **TRANSFER_PACK** | Session handoff (the memory) | Every session end |
+| **NEXT_SESSION_PROMPT** | Executable kickoff (the ignition) | Every session end |
 | **PROMPT_TEMPLATES** | Command patterns (the language) | As workflows evolve |
 
 ## Core Workflow

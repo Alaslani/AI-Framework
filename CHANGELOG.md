@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.4.0] - 2026-05-25
+
+### Added
+- `templates/NEXT_SESSION_PROMPT.md` — fifth PACK document ("The Ignition"): the executable kickoff for the next session (pre-paste snapshot, exact first message to paste, the one open question to resolve, guardrails, anti-patterns)
+- NEXT_SESSION_PROMPT documented in `docs/methodology/pack-system.md` (Four → Five Documents, session-start/end workflow, naming convention)
+
+### Changed
+- PACK system is now **5 documents** — updated `README.md`, `templates/README.md`, and `CLAUDE.md` (reading order + concept count)
+- `/session-end` in `templates/PROMPT_TEMPLATES.md` now also generates the Next Session Prompt (version bumped to v2.3)
+- `docs/patterns/session-handoff.md` — added "Pair It With a Next Session Prompt" section
+
+### Rationale
+- The Transfer Pack *describes* state; teams still re-derived the first move each session. The Next Session Prompt captures that move — written at session end while context is fresh — so the next session starts guardrailed and resolves its blocking decision before any work.
+
+---
+
 ## [2.3.0] - 2026-03-19
 
 ### Added
