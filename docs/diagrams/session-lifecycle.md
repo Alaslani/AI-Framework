@@ -29,6 +29,16 @@ flowchart LR
     style NSP fill:#27ae60,color:#fff
 ```
 
+**Legend:**
+
+| Color | Meaning |
+|-------|---------|
+| 🔵 Blue | Start / Load PACK / Find |
+| 🟢 Green | Implement |
+| 🟣 Purple | Compound |
+| 🟠 Orange | Session End |
+| 🟩 Dark green | Handoff artifacts — Transfer Pack + Next Session Prompt |
+
 **Key points:**
 - **Start:** Always load existing PACK documents for continuity
 - **FIC Loop:** Repeats within a session — multiple find-implement-compound cycles are normal
