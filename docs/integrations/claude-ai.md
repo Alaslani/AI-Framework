@@ -29,6 +29,7 @@ in that Project. This is where your PACK documents live.
 | MASTER_REFERENCE.md | AI reads project context every conversation |
 | PROMPT_TEMPLATES.md | Commands available in every chat |
 | TRANSFER_PACK.md | Replace after each session — continuity bridge |
+| NEXT_SESSION_PROMPT.md | Paste as the first message — the guardrailed kickoff; replace each session |
 | ROADMAP.md | Current priorities always visible |
 
 ### Project Knowledge vs File Uploads
@@ -59,12 +60,12 @@ Follows FIC workflow (Find→Implement→Compound).
 Uses Transfer Packs for session handoff.
 90%+ Mode: verify before act, one question until 95% confident.
 
-Project files: MASTER_REF (read first), PROMPTS, Transfer_Pack, Roadmap.
+Project files: MASTER_REF (read first), PROMPTS, Transfer_Pack, Next_Session_Prompt, Roadmap.
 Always latest version.
 
 Brief chat, rigorous docs.
 Ask before token-heavy tools (web search, web fetch).
-Create Transfer Pack + update MASTER_REF at session end.
+Create Transfer Pack + Next Session Prompt + update MASTER_REF at session end.
 ```
 
 ### Memory vs Project Knowledge
@@ -95,8 +96,9 @@ Create Transfer Pack + update MASTER_REF at session end.
 
 1. Open your Project in claude.ai
 2. Claude automatically has your PACK docs in context
-3. State your task using commands: `/research [name]` or `/plan [name]`
-4. Claude reads MASTER_REF and TRANSFER_PACK automatically
+3. Paste the NEXT_SESSION_PROMPT as your first message — resolve its open question before any work
+4. State your task using commands: `/research [name]` or `/plan [name]`
+5. Claude reads MASTER_REF and TRANSFER_PACK automatically
 
 ### During a Session
 
@@ -108,9 +110,9 @@ Create Transfer Pack + update MASTER_REF at session end.
 
 ### Ending a Session
 
-1. Ask Claude: "Create a Transfer Pack for this session"
-2. Download the Transfer Pack (or copy it)
-3. Replace the old TRANSFER_PACK.md in Project Knowledge
+1. Ask Claude: "Create a Transfer Pack and a Next Session Prompt for this session"
+2. Download both (or copy them)
+3. Replace the old TRANSFER_PACK.md and NEXT_SESSION_PROMPT.md in Project Knowledge
 4. If new learnings emerged: ask Claude to update MASTER_REFERENCE too
 
 ---

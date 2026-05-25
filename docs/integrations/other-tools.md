@@ -214,12 +214,16 @@ The Find → Implement → Compound workflow works everywhere:
 2. **Implement**: Plan, execute one phase at a time, verify
 3. **Compound**: Capture learnings for next time
 
-### Transfer Packs
+### Transfer Packs + Next Session Prompts
 Session handoffs are universal. Always document:
 - What was completed
 - Current state
 - Next steps
 - New learnings
+
+Pair the Transfer Pack (the state) with a Next Session Prompt (the kickoff you
+paste to start the next session) — the open question to resolve first and the
+guardrails to enforce. Works in any tool.
 
 ### Spec-First
 The description of what to build matters more than the code. Write specs, let AI generate code.

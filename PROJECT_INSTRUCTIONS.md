@@ -25,6 +25,7 @@ Upload these filled-in files as Project Knowledge:
 - Your `MASTER_REFERENCE.md`
 - Your `PROMPT_TEMPLATES.md`
 - Your `TRANSFER_PACK.md` (replace after each session)
+- Your `NEXT_SESSION_PROMPT.md` (paste as the first message; replace after each session)
 - Your `ROADMAP.md`
 
 ### Step 4: Start Working
@@ -40,6 +41,7 @@ Project Knowledge files and follow your instructions.
 You are working on [PROJECT NAME] — [one-line description].
 
 ## Reading Order (every new chat)
+0. NEXT_SESSION_PROMPT — the kickoff pasted as the first message (resolve its open question before any work)
 1. MASTER_REFERENCE — project context, architecture, learnings
 2. TRANSFER_PACK — where we left off, next steps
 3. PROMPT_TEMPLATES — available commands (/research, /plan, /implement)

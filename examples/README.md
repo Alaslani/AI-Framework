@@ -18,6 +18,7 @@ Real-world examples of AI-Framework in action.
 Each example contains:
 - **MASTER_REFERENCE.md** — Filled project knowledge base
 - **TRANSFER_PACK.md** — Sample session handoff
+- **NEXT_SESSION_PROMPT.md** — Sample next-session kickoff (pairs with the Transfer Pack)
 - **sample-research.md** (web-app only) — Example research output with line numbers
 
 ## Adapting to Your Project

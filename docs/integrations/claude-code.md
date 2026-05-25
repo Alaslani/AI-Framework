@@ -215,7 +215,8 @@ Before closing a session, run through these steps:
 2. **Capture learnings** — What surprised you, what broke, what worked
 3. **Update CLAUDE.md** — If the model made a mistake you corrected, add it so the same mistake doesn't recur
 4. **Identify blockers** — What's preventing the next step
-5. **Generate Transfer Pack** — Handoff for the next session
+5. **Generate Transfer Pack** — Handoff for the next session (the state)
+6. **Write Next Session Prompt** — The kickoff to paste next session (the first move + open question + guardrails)
 
 **Key**: The CLAUDE.md self-improvement loop. Mistakes discovered → add to CLAUDE.md → next session avoids them. This creates a continuous improvement cycle where every session makes the project smarter.
 

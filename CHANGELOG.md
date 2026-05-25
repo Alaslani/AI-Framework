@@ -10,12 +10,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 - `templates/NEXT_SESSION_PROMPT.md` — fifth PACK document ("The Ignition"): the executable kickoff for the next session (pre-paste snapshot, exact first message to paste, the one open question to resolve, guardrails, anti-patterns)
+- `examples/web-app/NEXT_SESSION_PROMPT.md` — worked example pairing with the sample Transfer Pack
 - NEXT_SESSION_PROMPT documented in `docs/methodology/pack-system.md` (Four → Five Documents, session-start/end workflow, naming convention)
 
 ### Changed
-- PACK system is now **5 documents** — updated `README.md`, `templates/README.md`, and `CLAUDE.md` (reading order + concept count)
+- PACK system is now **5 documents** — propagated to every doc that enumerates or counts the set: `README.md`, `templates/README.md`, `CLAUDE.md`, `PROJECT_INSTRUCTIONS.md`, `docs/getting-started.md`, `docs/integrations/claude-ai.md`, `docs/integrations/claude-code.md`, `docs/integrations/other-tools.md`, and `examples/README.md`
 - `/session-end` in `templates/PROMPT_TEMPLATES.md` now also generates the Next Session Prompt (version bumped to v2.3)
 - `docs/patterns/session-handoff.md` — added "Pair It With a Next Session Prompt" section
+- `docs/diagrams/session-lifecycle.md` — session-end now emits both Transfer Pack and Next Session Prompt, with the prompt feeding back into the next session start
 
 ### Rationale
 - The Transfer Pack *describes* state; teams still re-derived the first move each session. The Next Session Prompt captures that move — written at session end while context is fresh — so the next session starts guardrailed and resolves its blocking decision before any work.

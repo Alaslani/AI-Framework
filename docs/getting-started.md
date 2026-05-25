@@ -30,8 +30,9 @@ When starting an AI session:
 
 Before ending:
 1. Create or update TRANSFER_PACK with session summary
-2. Add any learnings to MASTER_REFERENCE
-3. Note next steps
+2. Write NEXT_SESSION_PROMPT — the kickoff to paste next session
+3. Add any learnings to MASTER_REFERENCE
+4. Note next steps
 
 ## Workflow Selection
 
@@ -46,16 +47,18 @@ Before ending:
 
 ### Starting a Session
 
-1. Read your MASTER_REFERENCE
-2. Read latest TRANSFER_PACK (if exists)
-3. State your task clearly
-4. Follow appropriate workflow
+1. Paste the NEXT_SESSION_PROMPT (if one exists) and resolve its open question
+2. Read your MASTER_REFERENCE
+3. Read latest TRANSFER_PACK (if exists)
+4. State your task clearly
+5. Follow appropriate workflow
 
 ### Ending a Session
 
 1. Create/update TRANSFER_PACK with summary
-2. Add learnings to MASTER_REFERENCE
-3. Note blockers and next steps
+2. Write NEXT_SESSION_PROMPT for the next session
+3. Add learnings to MASTER_REFERENCE
+4. Note blockers and next steps
 
 ### When to Reset Context
 

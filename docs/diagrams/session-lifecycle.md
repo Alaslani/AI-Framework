@@ -16,6 +16,8 @@ flowchart LR
 
     FIC --> END_SESSION[Session End]
     END_SESSION --> TP([Transfer Pack])
+    END_SESSION --> NSP([Next Session Prompt])
+    NSP -.kickoff for next session.-> START
 
     style START fill:#4a9eff,color:#fff
     style LOAD fill:#4a9eff,color:#fff
@@ -24,12 +26,13 @@ flowchart LR
     style C fill:#9b59b6,color:#fff
     style END_SESSION fill:#f5a623,color:#fff
     style TP fill:#27ae60,color:#fff
+    style NSP fill:#27ae60,color:#fff
 ```
 
 **Key points:**
 - **Start:** Always load existing PACK documents for continuity
 - **FIC Loop:** Repeats within a session — multiple find-implement-compound cycles are normal
-- **End:** Capture learnings and create a Transfer Pack so the next session starts ahead
+- **End:** Capture learnings, create a Transfer Pack (the state), and write a Next Session Prompt (the kickoff to paste) so the next session starts ahead
 
 **When to use:** Onboarding someone to the AI-Framework workflow, or explaining why session start and end rituals matter for knowledge compounding.
 
