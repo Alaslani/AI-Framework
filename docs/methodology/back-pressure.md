@@ -153,6 +153,8 @@ The key insight is that dependency diagrams sit between "Integration Tests" and 
 
 Back pressure tells you *what* to verify. The [Evals System](evals-system.md) tells you *how* to enforce it automatically — ESLint for deterministic checks, Claude Code hooks for taste violations, and cross-model review for architectural blind spots.
 
+For the security class of errors, [Semgrep SAST + /security-scan](semgrep-sast.md) moves "is this secure?" off LLM judgment and onto a deterministic scanner — a back-pressure layer between integration tests and visual/manual review.
+
 ---
 
 *Next: [PACK System](pack-system.md)*

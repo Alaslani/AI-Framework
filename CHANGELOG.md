@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.5.0] - 2026-05-27
+
+### Added
+- `docs/methodology/semgrep-sast.md` — guide for adding Semgrep SAST as a deterministic security gate: install per ecosystem (`pipx`/`brew`/Docker/CI action, public rulesets need no token), ruleset selection per language (`p/owasp-top-ten`, `p/secrets`, `p/python`, `p/typescript`, `p/golang`, …), the `/security-scan` scope model, and a safe CI rollout (assess baseline → triage → gate on `--severity ERROR --error`)
+- `templates/commands/security-scan.md` — drop-in `/security-scan` Claude Code command template with the Scope → Steps matrix and the design rules embedded
+- Semgrep SAST guide added to README table of contents; cross-linked from `SECURITY.md` and `docs/methodology/back-pressure.md`; command template registered in `templates/README.md`
+
+### Rationale
+- `SECURITY.md` covered the vulnerability classes and AI audit prompts, but asking an LLM "is this secure?" is the weakest verification. SAST moves the detectable issues onto a deterministic tool — and the design rules guard against the silent-pass failure modes (scanning a non-existent path, treating "findings found" as "tool missing", fallback-only custom checks) that make a scan worse than none.
+
+---
+
 ## [2.4.0] - 2026-05-25
 
 ### Added

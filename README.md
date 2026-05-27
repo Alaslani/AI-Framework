@@ -132,6 +132,7 @@ Confirm the user has:
   - [Learning Tests](docs/methodology/learning-tests.md)
   - [Back Pressure](docs/methodology/back-pressure.md)
   - [Evals System](docs/methodology/evals-system.md)
+  - [Semgrep SAST + /security-scan](docs/methodology/semgrep-sast.md)
 - **Diagrams**
   - [All Diagrams](docs/diagrams/README.md) — Mermaid visual references
 - **Patterns**
