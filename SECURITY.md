@@ -531,6 +531,19 @@ I'm about to deploy. Quickly check for critical security issues:
 
 ---
 
+## Automate the Mechanical Checks
+
+AI audit prompts are useful, but asking an LLM "is this secure?" is the weakest
+form of verification — same code, different prompt, different answer. Move the
+detectable issues above (injection, hardcoded secrets, dangerous APIs) onto a
+deterministic tool: add Semgrep SAST, a `/security-scan` command, and a CI gate.
+
+See **[Semgrep SAST + /security-scan](docs/methodology/semgrep-sast.md)** for the
+setup — including the failure modes (scanning a path that doesn't exist, treating
+"findings found" as "tool missing") that make a scan worse than no scan.
+
+---
+
 ## Resources
 
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/) — Most critical web security risks
