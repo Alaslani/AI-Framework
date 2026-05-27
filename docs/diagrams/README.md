@@ -14,6 +14,7 @@ Visual references for AI-Framework concepts. All diagrams use [Mermaid](https://
 | Session Lifecycle | [session-lifecycle.md](session-lifecycle.md) | Understanding the full session flow |
 | Hook Execution Flow | [hook-execution-flow.md](hook-execution-flow.md) | How Claude Code hooks gate tool execution |
 | Dual Verification | [dual-verification.md](dual-verification.md) | Cross-model review in the PR lifecycle |
+| Security Scan Flow | [security-scan-flow.md](security-scan-flow.md) | Why a scan can pass empty, and safe CI gate rollout |
 
 ## Usage
 
