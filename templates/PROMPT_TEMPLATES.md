@@ -16,6 +16,7 @@
 | `/bug` | Report bug during work | Bug entry |
 | `/session-end` | End of session — capture + improve | Knowledge update + CLAUDE.md |
 | `/auto` | Autonomous batch work — slot machine | Checkpoint → work → accept/revert |
+| `/security-scan` | Security sweep — SAST, secrets, deps | Findings report (Semgrep + custom) |
 
 ---
 
@@ -318,6 +319,29 @@ Don't wrestle with broken output — revert and re-prompt with clearer instructi
 | Code cleanup and formatting | Security-critical code |
 | Refactoring (well-tested code) | Database migrations |
 | Multi-file repetitive changes | Financial calculations |
+
+---
+
+## 6.6. Security Scan
+
+```markdown
+/security-scan [full|sast|secrets|deps|code]
+
+## Scope
+full (default) · sast · secrets · deps · code
+A single-purpose scope returns only that tool's output — nothing mixed in.
+
+## Rules
+- Scan verified source trees — never an assumed root (an empty scan is not "clean").
+- Detect the tool with `command -v`; parse `results[]`. A "findings found" exit
+  code means findings, not "tool missing."
+- Custom/project checks run additively, never fallback-only — adding Semgrep
+  must not reduce coverage.
+```
+
+Drop-in command: [`commands/security-scan.md`](commands/security-scan.md) (copy to
+`.claude/commands/`). Full setup, ruleset selection, and the CI gate:
+[Semgrep SAST + /security-scan](../docs/methodology/semgrep-sast.md).
 
 ---
 

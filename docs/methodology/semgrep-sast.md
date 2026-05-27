@@ -31,6 +31,9 @@ Local (fast feedback)            CI (enforcement)
 └──────────────────────┘         └──────────────────────────┘
 ```
 
+A rendered version of this flow, including the safe CI rollout, is in
+[docs/diagrams/security-scan-flow.md](../diagrams/security-scan-flow.md).
+
 This is language-agnostic: the principles below apply whether the code is
 Python, JavaScript/TypeScript, Go, Ruby, Java, or a polyglot monorepo.
 
